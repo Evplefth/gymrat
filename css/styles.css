@@ -1,0 +1,268 @@
+/* Ensure the full viewport is covered */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #222; 
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .content-wrapper {
+    flex: 1 0 auto;
+  }
+  
+  /* Top bar styling */
+  .top-bar {
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #e74c3c;
+    flex-wrap: wrap;
+  }
+
+/* Logo Styling */
+.logo-link img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-link img:hover {
+  transform: scale(1.1);
+}
+
+/* Search Form */
+.search-form {
+  display: flex;
+  align-items: center;
+  background: #444;
+  padding: 5px;
+  border-radius: 8px;
+  flex-grow: 1;
+  max-width: 400px;
+  justify-content: center;
+  margin: 0 auto; /* Keeps it centered */
+}
+
+.search-form .form-control {
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.search-form .form-control::placeholder {
+  color: #bbb;
+}
+
+.search-form .btn {
+  background: #e74c3c;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.search-form .btn:hover {
+  background: #c0392b;
+}
+
+/* Red Sign-up Button */
+.red-btn {
+  background: #e74c3c;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.red-btn:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+  
+  /* Left menu container */
+.menu-container {
+  background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-container h5 {
+  color: #e74c3c;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e74c3c;
+  padding-bottom: 5px;
+}
+
+.menu-container a {
+  display: block;
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 18px;
+  margin: 10px 0;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  text-align: center;
+}
+
+.menu-container a:hover {
+  background: #e74c3c;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+  
+  /* Main content container */
+  .content-container {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  /* BMI Calculator specific styling */
+.bmi-calculator {
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+h1 {
+  font-size: 32px;
+  color: #e74c3c; /* Gym red color */
+  margin-bottom: 20px;
+}
+
+table th, table td {
+  padding: 20px;
+  border: 1px solid #444;
+  text-align: center;
+  background-color: #2c2c2c; /* Dark grey for table */
+}
+
+table th {
+  background-color: #444; /* Darker grey for header */
+}
+
+table td input {
+  width: 90%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333;
+  border: 1px solid #444;
+  color: #f5f5f5;
+  border-radius: 4px;
+}
+
+table td input::placeholder {
+  color: #888; /* Placeholder text color */
+}
+.bmiForm{
+  padding: 20px;
+  border: 1px solid #444;
+  text-align: center;
+  background-color: #2c2c2c;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  
+
+}
+h2{
+  font-size: 32px;
+  color: #e74c3c; /* Gym red color */
+  margin-bottom: 20px;
+}
+  
+.menu-item {
+  display: block;
+  width: 100%;
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  text-align: left;
+}
+
+.menu-item:hover {
+  background-color: #e74c3c;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.footer h5 {
+  color: #ff5555; 
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footer .text-muted {
+  color: #aaa !important;
+}
+
+.footer a {
+  color: #ddd;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: #ff5555; 
+}
+
+.footer .border-top {
+  border-color: #333 !important;
+}
+
+/* Ensures footer stays at bottom */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-fluid {
+  flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+  
+  .footer .col-md-4 {
+    margin-bottom: 1.5rem;
+  }
+}
