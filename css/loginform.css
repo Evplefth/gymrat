@@ -1,0 +1,124 @@
+/* Ensure the login form is properly centered */
+.module-login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+  max-width: 480px;
+  width: 95%;
+  text-align: center;
+  color: #fff;
+}
+
+/* Headline */
+.module-head h3 {
+  font-size: 30px;
+  color: #e74c3c;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #e74c3c;
+  display: inline-block;
+}
+
+/* Input fields */
+.controls input {
+  background-color: #333;
+  border: 2px solid #444;
+  border-radius: 8px;
+  color: #fff;
+  padding: 14px 16px;
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.controls input:focus {
+  background-color: #3a3a3a;
+  border-color: #e74c3c;
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.3);
+  outline: none;
+}
+
+/* Checkbox */
+.module-foot label.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.module-foot input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+  accent-color: #e74c3c;
+}
+
+/* Login button */
+.btn-primary {
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 14px 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  display: inline-block;
+}
+
+/* Button Hover Effect */
+.btn-primary:hover {
+  background-color: #c0392b;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* RESPONSIVE DESIGN FOR MOBILE */
+@media (max-width: 768px) {
+  .module-login {
+    width: 90%;
+    padding: 2.5rem;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 576px) {
+  .module-login {
+    width: 95%;
+    padding: 2rem;
+    max-width: 380px;
+  }
+
+  .module-head h3 {
+    font-size: 24px; /* Slightly smaller title */
+  }
+
+  .controls input {
+    font-size: 16px; /* Make input text smaller */
+    padding: 12px;
+  }
+
+  .btn-primary {
+    width: 100%; /* Full width button for easier tapping */
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
