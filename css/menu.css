@@ -1,0 +1,137 @@
+/* Existing styles remain the same */
+
+/* Mobile Navigation Toggle */
+.mobile-nav-toggle {
+    display: none;
+    background-color: #333;
+    padding: 10px;
+    text-align: right;
+}
+
+.mobile-side-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    padding: 20px;
+}
+
+.mobile-side-menu.open {
+    left: 0;
+}
+
+/* Mobile Side Menu Text Styling */
+.mobile-side-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 15px;
+    margin: 5px 0;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-side-menu a:hover {
+    background-color: rgba(255,255,255,0.2);
+    text-decoration: none;
+}
+
+.mobile-side-menu h5 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 10px;
+}
+
+.mobile-side-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+}
+
+
+.close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Mobile Calendar Styles */
+.mobile-calendar {
+    display: none;
+}
+
+.calendar-day {
+    background-color: #2c2c2c;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.day-header {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.calendar-day input {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    /* Hide desktop menu */
+    .desktop-menu {
+        display: none;
+    }
+
+    /* Show mobile navigation */
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    /* Hide desktop calendar, show mobile calendar */
+    .desktop-calendar {
+        display: none;
+    }
+
+    .mobile-calendar {
+        display: block;
+    }
+
+    .mobile-side-menu {
+        display: block;
+    }
+}
+
+/* Ensure inputs are not zoomed on mobile */
+input, select, textarea {
+    font-size: 16px;
+}
