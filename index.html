@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymRat - Premium Fitness Club</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/menu.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <a href="./index.html" class="logo-link">
+      <img src="./images/logo.png" alt="Gym Logo">
+    </a>
+    
+    <form class="search-form">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search..."
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+    
+    <button class="login-btn auth-btn" onclick="location.href='./login.html'">Login</button>
+    <button class="logout-btn auth-btn" onclick="location.href='./index.html'" style='visibility: hidden;'>Log out</button>
+    
+  </div>
+
+  <!-- Mobile Navigation Toggle (Only visible on mobile) -->
+  <div class="mobile-nav-toggle">
+    <button class="btn btn-dark" id="mobileMenuToggle">☰ Menu</button>
+  </div>
+
+  <!-- Mobile Side Menu (Only visible on mobile) -->
+  <div class="mobile-side-menu" id="mobileSideMenu">
+    <button class="close-menu" id="closeMenuBtn">×</button>
+    <h5>Menu</h5>
+          <a href="./index.html" class="menu-item active-menu-item" data-protected="true">Home</a>
+          <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+          <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+          <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+          <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+          <a href="./triceps.html" class="menu-item " data-protected="true">Triceps</a>
+          <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+          <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+          <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+          <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+          <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Desktop Left Menu (Hidden on mobile) -->
+      <div class="col-12 col-md-3 col-lg-2 desktop-menu">
+        <div class="menu-container">
+          <h5>Menu</h5>
+          <!-- Use data attributes for protected pages -->
+          <a href="./index.html" class="menu-item active-menu-item" data-protected="true">Home</a>
+          <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+          <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+          <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+          <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+          <a href="./triceps.html" class="menu-item " data-protected="true">Triceps</a>
+          <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+          <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+          <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+          <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+          <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-9 col-lg-10">
+        <div class="content-container">
+          <!-- Hero Section -->
+          <div class="hero-section">
+            <h1>PUSH YOUR LIMITS</h1>
+            <p class="hero-subtitle">Where strength meets community. Transform your body, elevate your mind.</p>
+            <div class="hero-cta">
+              <button class="btn btn-primary hero-btn" onclick="location.href='./register.html'">JOIN NOW</button>
+              <button class="btn btn-outline-light hero-btn-secondary">LEARN MORE</button>
+            </div>
+          </div>
+          
+          <!-- Features Section -->
+          <div class="features-section">
+            <h2>WHY CHOOSE US?</h2>
+            
+            <div class="row mb-5">
+              <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fas fa-dumbbell"></i>
+                  </div>
+                  <h3>Premium Equipment</h3>
+                  <p>State-of-the-art machines and free weights for every training style and fitness level.</p>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <h3>Expert Trainers</h3>
+                  <p>Certified professionals ready to guide you through personalized workout programs.</p>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <h3>24/7 Access</h3>
+                  <p>Train whenever fits your schedule. Our doors are always open for members.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Membership Section -->
+          <div class="membership-section">
+            <h2>MEMBERSHIP PLANS</h2>
+            
+            <div class="row mb-5">
+              <div class="col-md-4 mb-4">
+                <div class="plan-card">
+                  <div class="plan-header">
+                    <h3>Basic</h3>
+                    <p class="plan-price">€29<span>/month</span></p>
+                  </div>
+                  <div class="plan-features">
+                    <ul>
+                      <li><i class="fas fa-check"></i> Access to gym floor</li>
+                      <li><i class="fas fa-check"></i> Basic equipment usage</li>
+                      <li><i class="fas fa-check"></i> Locker room access</li>
+                      <li><i class="fas fa-check"></i> Online workout planner</li>
+                      <li class="disabled"><i class="fas fa-times"></i> Personal trainer sessions</li>
+                      <li class="disabled"><i class="fas fa-times"></i> Group classes</li>
+                    </ul>
+                  </div>
+                  <button class="btn plan-btn">SELECT PLAN</button>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="plan-card featured-plan">
+                  <div class="plan-badge">POPULAR</div>
+                  <div class="plan-header">
+                    <h3>Premium</h3>
+                    <p class="plan-price">€49<span>/month</span></p>
+                  </div>
+                  <div class="plan-features">
+                    <ul>
+                      <li><i class="fas fa-check"></i> 24/7 gym access</li>
+                      <li><i class="fas fa-check"></i> All equipment usage</li>
+                      <li><i class="fas fa-check"></i> Locker room + towel service</li>
+                      <li><i class="fas fa-check"></i> Advanced fitness tracking</li>
+                      <li><i class="fas fa-check"></i> 2 PT sessions monthly</li>
+                      <li><i class="fas fa-check"></i> Unlimited group classes</li>
+                    </ul>
+                  </div>
+                  <button class="btn plan-btn">SELECT PLAN</button>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="plan-card">
+                  <div class="plan-header">
+                    <h3>Elite</h3>
+                    <p class="plan-price">€79<span>/month</span></p>
+                  </div>
+                  <div class="plan-features">
+                    <ul>
+                      <li><i class="fas fa-check"></i> VIP 24/7 access</li>
+                      <li><i class="fas fa-check"></i> Premium equipment priority</li>
+                      <li><i class="fas fa-check"></i> Luxury locker + amenities</li>
+                      <li><i class="fas fa-check"></i> Personal nutrition plan</li>
+                      <li><i class="fas fa-check"></i> Weekly PT sessions</li>
+                      <li><i class="fas fa-check"></i> Private class bookings</li>
+                    </ul>
+                  </div>
+                  <button class="btn plan-btn">SELECT PLAN</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Trainers Section -->
+          <div class="trainers-section">
+            <h2>MEET OUR TRAINERS</h2>
+            
+            <div class="row mb-5">
+              <div class="col-md-3 mb-4">
+                <div class="trainer-card">
+                  <div class="trainer-img-placeholder"></div>
+                  <h4>Alex Dimitriou</h4>
+                  <p class="trainer-specialty">Strength & Conditioning</p>
+                  <div class="trainer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-3 mb-4">
+                <div class="trainer-card">
+                  <div class="trainer-img-placeholder"></div>
+                  <h4>Maria Papadopoulou</h4>
+                  <p class="trainer-specialty">Yoga & Flexibility</p>
+                  <div class="trainer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-3 mb-4">
+                <div class="trainer-card">
+                  <div class="trainer-img-placeholder"></div>
+                  <h4>Nikos Andreou</h4>
+                  <p class="trainer-specialty">Cardio & HIIT</p>
+                  <div class="trainer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-3 mb-4">
+                <div class="trainer-card">
+                  <div class="trainer-img-placeholder"></div>
+                  <h4>Elena Katsarou</h4>
+                  <p class="trainer-specialty">Nutrition & Weight Loss</p>
+                  <div class="trainer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonials Section -->
+          <div class="testimonials-section">
+            <h2>WHAT OUR MEMBERS SAY</h2>
+            
+            <div class="row mb-5">
+              <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                  <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Joining GymRat was the best decision I've made for my fitness journey. The trainers are amazing and the atmosphere keeps me motivated.</p>
+                  </div>
+                  <div class="testimonial-author">
+                    <div class="testimonial-avatar"></div>
+                    <div class="testimonial-info">
+                      <h5>Giorgos K.</h5>
+                      <p>Member for 2 years</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                  <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>I've tried many gyms before, but none had the equipment variety and 24/7 access that GymRat offers. It's perfect for my busy schedule.</p>
+                  </div>
+                  <div class="testimonial-author">
+                    <div class="testimonial-avatar"></div>
+                    <div class="testimonial-info">
+                      <h5>Anna M.</h5>
+                      <p>Member for 1 year</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                  <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>The personalized workout plans and nutrition advice helped me lose 15kg in just 6 months. The staff truly cares about your goals.</p>
+                  </div>
+                  <div class="testimonial-author">
+                    <div class="testimonial-avatar"></div>
+                    <div class="testimonial-info">
+                      <h5>Dimitris P.</h5>
+                      <p>Member for 8 months</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Call to Action Section -->
+          <div class="cta-section">
+            <h2>START YOUR FITNESS JOURNEY TODAY</h2>
+            <p>Join our community and transform your life with expert guidance and top-notch facilities.</p>
+            <button class="btn btn-primary cta-btn" onclick="location.href='./register.html'">BECOME A MEMBER</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>About Us</h5>
+          <p class="text-muted">Our gym is dedicated to helping you achieve your fitness goals in a supportive environment.</p>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <h5>Contact Us</h5>
+          <address class="text-muted">
+            Σωρού 74<br>
+            Μαρούσι 151 25<br>
+            <a href="tel:+1234567890" class="text-decoration-none">Phone: (123) 456-7890</a><br>
+            <a href="mailto:info@gymname.com" class="text-decoration-none">Email: info@gymname.com</a>
+          </address>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <h5>Follow Us</h5>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row border-top pt-3">
+        <div class="col-12 text-center">
+          <p class="text-muted">© 2025 GymRat. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./js/menu.js"></script>
+  <script src="./js/loginstate.js"></script>
+  <script src="./js/logincheck.js"></script>
+  
+</body>
+</html>

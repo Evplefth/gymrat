@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triceps Training - GymRat</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/menu.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <a href="./index.html" class="logo-link">
+      <img src="./images/logo.png" alt="Gym Logo">
+    </a>
+    
+    <form class="search-form">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search..."
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+    
+    <button class="login-btn auth-btn" onclick="location.href='./login.html'">Login</button>
+    <button class="logout-btn auth-btn" onclick="location.href='./index.html'"style='visibility: hidden;'>Log out</button>
+  </div>
+
+  <!-- Mobile Navigation Toggle (Only visible on mobile) -->
+  <div class="mobile-nav-toggle">
+    <button class="btn btn-dark" id="mobileMenuToggle">☰ Menu</button>
+  </div>
+
+  <!-- Mobile Side Menu (Only visible on mobile) -->
+  <div class="mobile-side-menu" id="mobileSideMenu">
+    <button class="close-menu" id="closeMenuBtn">×</button>
+    <h5>Menu</h5>
+    <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+    <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+    <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+    <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+    <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+    <a href="./triceps.html" class="menu-item active-menu-item" data-protected="true">Triceps</a>
+    <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+    <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+    <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+    <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+    <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Desktop Left Menu (Hidden on mobile) -->
+      <div class="col-12 col-md-3 col-lg-2 desktop-menu">
+        <div class="menu-container">
+          <h5>Menu</h5>
+          <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+          <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+          <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+          <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+          <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+          <a href="./triceps.html" class="menu-item active-menu-item" data-protected="true">Triceps</a>
+          <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+          <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+          <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+          <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+          <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-9 col-lg-10">
+        <div class="content-container">
+          <div class="muscle-header">
+            <div class="muscle-title">
+              <h1>Triceps Training</h1>
+              <p class="muscle-subtitle">Develop powerful, well-defined triceps with our comprehensive guide</p>
+            </div>
+            <div class="muscle-overview">
+              <div class="muscle-illustration">
+                <div class="muscle-image-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Introduction Section -->
+          <div class="muscle-intro">
+            <h2>Understanding Your Triceps</h2>
+            <p>The triceps brachii is a three-headed muscle located on the back of the upper arm. Despite being often overlooked in favor of the biceps, the triceps actually makes up about two-thirds of your upper arm mass and is crucial for arm strength and aesthetics.</p>
+            <p>Effective triceps training targets all three heads:</p>
+            <ul class="muscle-list">
+              <li><strong>Long Head</strong> - The largest head, runs along the back of the arm</li>
+              <li><strong>Lateral (Outer) Head</strong> - Located on the outside of the arm, gives width to the triceps</li>
+              <li><strong>Medial (Inner) Head</strong> - The smallest head, located on the inner side of the arm</li>
+            </ul>
+            <p>Well-developed triceps not only create impressive arm definition but also support performance in pushing exercises like bench press, overhead press, and push-ups.</p>
+          </div>
+          
+          <!-- Exercises Section -->
+          <div class="exercises-section">
+            <h2>Triceps Exercises</h2>
+            <p class="section-intro">Master these key exercises for complete triceps development. Click on any exercise card for detailed instructions.</p>
+            
+            <div class="row">
+              <!-- Exercise Card 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge beginner">Beginner</span>
+                  </div>
+                  <h3>Close-Grip Bench Press</h3>
+                  <p class="exercise-description">Compound movement that effectively targets all three triceps heads.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: All Triceps Heads</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Barbell, Bench</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise1Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge beginner">Beginner</span>
+                  </div>
+                  <h3>Triceps Pushdown</h3>
+                  <p class="exercise-description">Isolation exercise focusing on the lateral and medial heads of the triceps.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Lateral & Medial Heads</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Cable Machine</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise2Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Overhead Triceps Extension</h3>
+                  <p class="exercise-description">Emphasizes the long head of the triceps for better overall development.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Long Head</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Dumbbell, Cable, or EZ Bar</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise3Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 4 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Dips</h3>
+                  <p class="exercise-description">Effective bodyweight compound exercise for overall triceps mass.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: All Triceps Heads</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Parallel Bars or Bench</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise4Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 5 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Skull Crushers</h3>
+                  <p class="exercise-description">Isolation exercise that targets the long head while keeping tension throughout the movement.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Long Head</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: EZ Bar, Bench</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise5Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 6 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge advanced">Advanced</span>
+                  </div>
+                  <h3>Diamond Push-Ups</h3>
+                  <p class="exercise-description">Challenging bodyweight exercise that intensely targets all triceps heads.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: All Triceps Heads</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: None (Bodyweight)</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise6Modal">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Workout Plans Section -->
+          <div class="workout-plans-section">
+            <h2>Triceps Workout Plans</h2>
+            <p class="section-intro">Choose a workout plan based on your experience level and goals.</p>
+            
+            <div class="row">
+              <!-- Workout Plan Card 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card">
+                  <div class="workout-header">
+                    <h3>Beginner Routine</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Beginner</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">Perfect for those new to triceps training, focusing on proper form and building foundational strength.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 30 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 1-2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Triceps Pushdown: 3 sets x 12-15 reps</li>
+                        <li>Overhead Triceps Extension: 3 sets x 12-15 reps</li>
+                        <li>Bench Dips: 2 sets x 10-12 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 90 seconds between sets</p>
+                        <p><strong>Tempo:</strong> 2 seconds down, 1 second pause, 2 seconds up</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Workout Plan Card 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card featured-workout">
+                  <div class="workout-badge">Recommended</div>
+                  <div class="workout-header">
+                    <h3>Mass Builder</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Intermediate</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">Designed to maximize triceps size and strength using progressive overload principles.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 45 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Close-Grip Bench Press: 4 sets x 8-10 reps</li>
+                        <li>Skull Crushers: 3 sets x 10-12 reps</li>
+                        <li>Triceps Pushdown: 3 sets x 10-12 reps</li>
+                        <li>Overhead Triceps Extension: 3 sets x 12-15 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 60-90 seconds between sets</p>
+                        <p><strong>Tempo:</strong> 3 seconds down, 1 second pause, 2 seconds up</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Workout Plan Card 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card">
+                  <div class="workout-header">
+                    <h3>Definition & Strength</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Advanced</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">High-intensity workout for maximum definition and triceps strength.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 60 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Weighted Dips: 4 sets x 8-10 reps</li>
+                        <li>Close-Grip Bench Press: 3 sets x 8-10 reps</li>
+                        <li>Diamond Push-Ups: 3 sets to failure</li>
+                        <li>Skull Crushers: 3 sets x 10-12 reps</li>
+                        <li>Triceps Pushdown (Drop Sets): 2 sets x failure at 3 weights</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 60 seconds between sets</p>
+                        <p><strong>Tempo:</strong> 3 seconds down, 1 second pause, 1 second up, squeeze at top</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Training Tips Section -->
+          <div class="training-tips-section">
+            <h2>Triceps Training Tips</h2>
+            
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Form & Technique</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Keep your elbows close to your body during most triceps exercises</li>
+                    <li>Avoid flaring your elbows outward, which shifts focus away from the triceps</li>
+                    <li>Focus on full extension at the end of each repetition</li>
+                    <li>Minimize shoulder movement during isolation exercises</li>
+                    <li>Concentrate on feeling the triceps working throughout the movement</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Programming Guidelines</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Train triceps 1-2 times per week, allowing 48-72 hours for recovery</li>
+                    <li>Start with compound movements, then move to isolation exercises</li>
+                    <li>For mass: 8-10 reps, for definition: 12-15 reps</li>
+                    <li>Include exercises that target all three heads for complete development</li>
+                    <li>Pair triceps with chest or shoulders (push muscles) in your training split</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Injury Prevention</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Warm up thoroughly with light weights or resistance bands</li>
+                    <li>Never lock out your elbows forcefully at the top of extensions</li>
+                    <li>Maintain control throughout the negative (eccentric) phase</li>
+                    <li>If experiencing elbow pain, check your form and consider reducing weight</li>
+                    <li>Balance triceps work with biceps training for joint health</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Nutrition Support</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Consume adequate protein (1.6-2.2g per kg of bodyweight)</li>
+                    <li>Ensure sufficient carbohydrates for energy during intense training</li>
+                    <li>Stay hydrated before, during, and after workouts</li>
+                    <li>Consider a protein/carb shake within 30 minutes post-workout</li>
+                    <li>For growth, maintain a slight caloric surplus; for definition, a moderate deficit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Common Mistakes Section -->
+          <div class="common-mistakes-section">
+            <h2>Common Triceps Training Mistakes</h2>
+            
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Excessive Elbow Flare</h3>
+                  <p>Allowing elbows to flare out during movements shifts focus from the triceps to the shoulders.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Keep elbows tucked in close to your body, especially during pushdowns and close-grip presses.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Incomplete Range of Motion</h3>
+                  <p>Not fully extending the arms or not lowering the weight enough reduces triceps development.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Work through a complete range of motion, from a full stretch to a complete contraction.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Neglecting All Three Heads</h3>
+                  <p>Focusing only on certain exercises can lead to imbalanced triceps development.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Include a variety of exercises that target all three heads of the triceps for complete development.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Section -->
+          <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="accordion" id="tricepsFAQ">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    How often should I train triceps?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="faqOne" data-bs-parent="#tricepsFAQ">
+                  <div class="accordion-body">
+                    For optimal growth, train triceps 1-2 times per week with at least 48-72 hours of recovery between sessions. Since triceps are involved in many pushing movements, they're often trained on chest or shoulder days in a split routine.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Why are my triceps more sore after chest day than triceps day?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#tricepsFAQ">
+                  <div class="accordion-body">
+                    Triceps are heavily involved as secondary muscles in most chest pressing movements. If you train chest before triceps, your triceps are already partially fatigued, which can reduce their ability to handle direct triceps work later. Consider either training triceps before chest, or on separate days, or ensuring adequate recovery between chest and triceps training.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Which triceps exercises are best for mass?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#tricepsFAQ">
+                  <div class="accordion-body">
+                    Compound exercises like close-grip bench press, weighted dips, and skull crushers are most effective for building triceps mass. These exercises allow you to handle heavier loads, creating greater mechanical tension, which is a primary driver of muscle growth. Follow these compound movements with isolation exercises like pushdowns and overhead extensions to complete your workout.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How do I get rid of triceps flab or "bat wings"?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#tricepsFAQ">
+                  <div class="accordion-body">
+                    "Bat wings" are primarily a result of excess body fat combined with underdeveloped triceps. A two-pronged approach is necessary: 1) Reduce overall body fat through proper nutrition and a caloric deficit, as spot reduction is not possible; 2) Build triceps muscle through regular strength training focusing on all three heads. Overhead triceps extensions and dips are particularly effective for targeting the long head, which makes up most of the back of the arm.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    What causes elbow pain during triceps exercises?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#tricepsFAQ">
+                  <div class="accordion-body">
+                    Elbow pain during triceps training can be caused by several factors: improper form, overtraining, using too much weight, or medical conditions like tendonitis. To prevent elbow pain, ensure proper warm-up, use controlled movements, avoid locking out your elbows forcefully, and use appropriate weight. If pain persists, reduce weight and volume, check your form, and consider consulting with a healthcare professional if the issue continues.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Exercise Detail Modals -->
+  <!-- Modal for Close-Grip Bench Press -->
+  <div class="modal fade" id="exercise1Modal" tabindex="-1" aria-labelledby="exercise1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exercise1ModalLabel">Close-Grip Bench Press</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="exercise-modal-img">
+                <div class="exercise-img-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+              <div class="exercise-modal-info">
+                <p><strong>Target Muscles:</strong> All three triceps heads, chest (secondary), shoulders (secondary)</p>
+                <p><strong>Equipment:</strong> Barbell, bench</p>
+                <p><strong>Difficulty:</strong> Beginner</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5>Instructions</h5>
+              <ol class="instruction-steps">
+                <li>Lie on a flat bench with your feet firmly on the ground.</li>
+                <li>Grip the barbell with hands shoulder-width apart or slightly closer.</li>
+                <li>Unrack the barbell and hold it directly above your chest with arms fully extended.</li>
+                <li>Lower the bar in a controlled manner to your lower chest.</li>
+                <li>Press the bar back up by extending your elbows, focusing on using your triceps.</li>
+              </ol>
+              
+              <h5>Key Form Points</h5>
+              <ul class="key-points">
+                <li>Keep your elbows tucked close to your body</li>
+                <li>Avoid flaring your elbows outward</li>
+                <li>Maintain a stable position on the bench</li>
+                <li>Keep wrists straight throughout the movement</li>
+                <h5>Variations</h5>
+              <ul class="variations-list">
+                <li>Smith machine close-grip bench press</li>
+                <li>Close-grip dumbbell press</li>
+                <li>Incline close-grip bench press</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add to Workout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Triceps Pushdown -->
+  <div class="modal fade" id="exercise2Modal" tabindex="-1" aria-labelledby="exercise2ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exercise2ModalLabel">Triceps Pushdown</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="exercise-modal-img">
+                <div class="exercise-img-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+              <div class="exercise-modal-info">
+                <p><strong>Target Muscles:</strong> Lateral and medial heads of the triceps</p>
+                <p><strong>Equipment:</strong> Cable machine with straight bar or rope attachment</p>
+                <p><strong>Difficulty:</strong> Beginner</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5>Instructions</h5>
+              <ol class="instruction-steps">
+                <li>Stand facing a cable machine with a straight bar or rope attachment connected to the high pulley.</li>
+                <li>Grip the attachment with hands shoulder-width apart, palms facing down.</li>
+                <li>Keep your elbows close to your sides and at approximately 90 degrees.</li>
+                <li>Push the attachment down by extending your elbows until your arms are straight.</li>
+                <li>Pause briefly at the bottom, then slowly return to the starting position.</li>
+              </ol>
+              
+              <h5>Key Form Points</h5>
+              <ul class="key-points">
+                <li>Keep your upper arms stationary throughout</li>
+                <li>Maintain a slight forward lean from the hips</li>
+                <li>Focus on squeezing the triceps at full extension</li>
+                <li>Control the weight during the eccentric (upward) phase</li>
+              </ul>
+              
+              <h5>Variations</h5>
+              <ul class="variations-list">
+                <li>Rope pushdown (allows for greater rotation)</li>
+                <li>V-bar pushdown (neutral grip position)</li>
+                <li>Single-arm pushdown (addresses muscle imbalances)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add to Workout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Additional modals for other exercises would go here -->
+  
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>About Us</h5>
+          <p class="text-muted">Our gym is dedicated to helping you achieve your fitness goals in a supportive environment.</p>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <h5>Contact Us</h5>
+          <address class="text-muted">
+            Σωρού 74<br>
+            Μαρούσι 151 25<br>
+            <a href="tel:+1234567890" class="text-decoration-none">Phone: (123) 456-7890</a><br>
+            <a href="mailto:info@gymname.com" class="text-decoration-none">Email: info@gymname.com</a>
+          </address>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <h5>Follow Us</h5>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row border-top pt-3">
+        <div class="col-12 text-center">
+          <p class="text-muted">© 2025 GymRat. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./js/menu.js"></script>
+  <script src="./js/loginstate.js"></script>
+  <script src="./js/logincheck.js"></script>
+</body>
+</html>

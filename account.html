@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Information</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/menu.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <a href="./index.html" class="logo-link">
+      <img src="./images/logo.png" alt="Gym Logo">
+    </a>
+    
+    <form class="search-form">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search..."
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+    
+    <button class="login-btn auth-btn" onclick="location.href='./login.html'">Login</button>
+    <button class="logout-btn auth-btn" onclick="location.href='./index.html'">Log out</button>
+  </div>
+
+  <!-- Mobile Navigation Toggle (Only visible on mobile) -->
+  <div class="mobile-nav-toggle">
+    <button class="btn btn-dark" id="mobileMenuToggle">☰ Menu</button>
+  </div>
+
+  <!-- Mobile Side Menu (Only visible on mobile) -->
+  <div class="mobile-side-menu" id="mobileSideMenu">
+    <button class="close-menu" id="closeMenuBtn">×</button>
+    <h5>Menu</h5>
+    <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+          <a href="./account.html" class="menu-item active-menu-item" data-protected="true">My Account</a>
+          <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+          <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+          <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+          <a href="./triceps.html" class="menu-item " data-protected="true">Triceps</a>
+          <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+          <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+          <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+          <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+          <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Desktop Left Menu (Hidden on mobile) -->
+      <div class="col-12 col-md-3 col-lg-2 desktop-menu">
+        <div class="menu-container">
+          <h5>Menu</h5>
+          <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+          <a href="./account.html" class="menu-item  active-menu-item" data-protected="true">My Account</a>
+          <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+          <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+          <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+          <a href="./triceps.html" class="menu-item " data-protected="true">Triceps</a>
+          <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+          <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+          <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+          <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+          <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-9 col-lg-10">
+        <div class="content-container">
+          <div class="account-header">
+            <h1>Account Information</h1>
+            <p class="account-subtitle">Manage your personal details and fitness profile</p>
+          </div>
+          
+          <div class="account-content">
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="account-card">
+                  <div class="account-card-header">
+                    <i class="fas fa-user-circle"></i>
+                    <h4>Personal Details</h4>
+                  </div>
+                  <div class="account-card-body">
+                    <div class="info-row">
+                      <span class="info-label">Username:</span>
+                      <span class="info-value">GymAdmin</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="info-label">First Name:</span>
+                      <span class="info-value">Admin</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="info-label">Last Name:</span>
+                      <span class="info-value">Administrator</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="info-label">Email:</span>
+                      <span class="info-value">admin@gymrat.com</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="info-label">Phone:</span>
+                      <span class="info-value">+30 694 555 7890</span>
+                    </div>
+                    <div class="edit-button-container">
+                      <button class="btn edit-btn">Edit Details</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="account-card">
+                  <div class="account-card-header">
+                    <i class="fas fa-dumbbell"></i>
+                    <h4>Fitness Profile</h4>
+                  </div>
+                  <div class="account-card-body">
+                    <div class="info-row">
+                      <span class="info-label">Height:</span>
+                      <span class="info-value">185 cm</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="info-label">Weight:</span>
+                      <span class="info-value">82 kg</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="info-label">BMI:</span>
+                      <span class="info-value">24.0</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="info-label">Body Fat:</span>
+                      <span class="info-value">18%</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="info-label">Fitness Level:</span>
+                      <span class="info-value">Advanced</span>
+                    </div>
+                    <div class="edit-button-container">
+                      <button class="btn edit-btn">Update Measurements</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="account-card">
+                  <div class="account-card-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Membership Info</h4>
+                  </div>
+                  <div class="account-card-body">
+                    <div class="info-row">
+                      <span class="info-label">Status:</span>
+                      <span class="info-value status-active">Active</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="info-label">Type:</span>
+                      <span class="info-value">Premium</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="info-label">Start Date:</span>
+                      <span class="info-value">01/01/2025</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="info-label">Renewal:</span>
+                      <span class="info-value">01/01/2026</span>
+                    </div>
+                    <div class="info-row">
+                      <span class="info-label">Member ID:</span>
+                      <span class="info-value">GR-1001</span>
+                    </div>
+                    <div class="edit-button-container">
+                      <button class="btn edit-btn">Manage Membership</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row mt-3">
+              <div class="col-md-12">
+                <div class="account-card">
+                  <div class="account-card-header">
+                    <i class="fas fa-cog"></i>
+                    <h4>Account Settings</h4>
+                  </div>
+                  <div class="account-card-body">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="settings-group">
+                          <h6>Privacy Settings</h6>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="profileVisible" checked>
+                            <label class="form-check-label" for="profileVisible">Profile Visibility</label>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="shareWorkouts" checked>
+                            <label class="form-check-label" for="shareWorkouts">Share Workouts</label>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-4">
+                        <div class="settings-group">
+                          <h6>Notification Settings</h6>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                            <label class="form-check-label" for="emailNotifications">Email Notifications</label>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="smsNotifications">
+                            <label class="form-check-label" for="smsNotifications">SMS Notifications</label>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-4">
+                        <div class="settings-group">
+                          <h6>Account Actions</h6>
+                          <button class="btn change-password-btn">Change Password</button>
+                          <button class="btn delete-account-btn">Delete Account</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>About Us</h5>
+          <p class="text-muted">Our gym is dedicated to helping you achieve your fitness goals in a supportive environment.</p>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <h5>Contact Us</h5>
+          <address class="text-muted">
+            Σωρού 74<br>
+            Μαρούσι 151 25<br>
+            <a href="tel:+1234567890" class="text-decoration-none">Phone: (123) 456-7890</a><br>
+            <a href="mailto:info@gymname.com" class="text-decoration-none">Email: info@gymname.com</a>
+          </address>
+        </div>
+      </div>
+      
+      <div class="row border-top pt-3">
+        <div class="col-12 text-center">
+          <p class="text-muted">© 2025 GymRat. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./js/menu.js"></script>
+  <script src="./js/loginstate.js"></script>
+  <script src="./js/logincheck.js"></script>
+</body>
+</html>

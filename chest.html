@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chest Training - GymRat</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/menu.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <a href="./index.html" class="logo-link">
+      <img src="./images/logo.png" alt="Gym Logo">
+    </a>
+    
+    <form class="search-form">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search..."
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+    
+    <button class="login-btn auth-btn" onclick="location.href='./login.html'">Login</button>
+    <button class="logout-btn auth-btn" onclick="location.href='./index.html'"style='visibility: hidden;'>Log out</button>
+  </div>
+
+  <!-- Mobile Navigation Toggle (Only visible on mobile) -->
+  <div class="mobile-nav-toggle">
+    <button class="btn btn-dark" id="mobileMenuToggle">☰ Menu</button>
+  </div>
+
+  <!-- Mobile Side Menu (Only visible on mobile) -->
+  <div class="mobile-side-menu" id="mobileSideMenu">
+    <button class="close-menu" id="closeMenuBtn">×</button>
+    <h5>Menu</h5>
+    <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+    <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+    <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+    <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+    <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+    <a href="./triceps.html" class="menu-item" data-protected="true">Triceps</a>
+    <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+    <a href="./chest.html" class="menu-item active-menu-item" data-protected="true">Chest</a>
+    <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+    <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+    <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Desktop Left Menu (Hidden on mobile) -->
+      <div class="col-12 col-md-3 col-lg-2 desktop-menu">
+        <div class="menu-container">
+          <h5>Menu</h5>
+          <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+          <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+          <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+          <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+          <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+          <a href="./triceps.html" class="menu-item" data-protected="true">Triceps</a>
+          <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+          <a href="./chest.html" class="menu-item active-menu-item" data-protected="true">Chest</a>
+          <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+          <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+          <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-9 col-lg-10">
+        <div class="content-container">
+          <div class="muscle-header">
+            <div class="muscle-title">
+              <h1>Chest Training</h1>
+              <p class="muscle-subtitle">Build a powerful, well-defined chest with our comprehensive guide</p>
+            </div>
+            <div class="muscle-overview">
+              <div class="muscle-illustration">
+                <div class="muscle-image-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Introduction Section -->
+          <div class="muscle-intro">
+            <h2>Understanding Your Chest Muscles</h2>
+            <p>The chest muscles, also known as the pectorals, are among the most noticeable muscle groups and often a primary focus in many training programs. A well-developed chest enhances your physique, improves pushing strength, and contributes to overall upper body balance.</p>
+            <p>The chest consists of two main muscles:</p>
+            <ul class="muscle-list">
+              <li><strong>Pectoralis Major</strong> - The large, fan-shaped muscle that covers most of the chest and has distinct regions:
+                <ul>
+                  <li><strong>Clavicular (Upper) Region</strong> - Attaches to the collarbone and is activated with incline movements</li>
+                  <li><strong>Sternal (Middle) Region</strong> - Connects to the sternum and is targeted with flat bench exercises</li>
+                  <li><strong>Costal (Lower) Region</strong> - Attaches to the ribs and is engaged with decline movements</li>
+                </ul>
+              </li>
+              <li><strong>Pectoralis Minor</strong> - A smaller, triangular muscle that lies underneath the pectoralis major</li>
+            </ul>
+            <p>Effective chest training incorporates exercises that target all regions of the chest from multiple angles, using various types of resistance and movement patterns.</p>
+          </div>
+          
+          <!-- Exercises Section -->
+          <div class="exercises-section">
+            <h2>Chest Exercises</h2>
+            <p class="section-intro">Master these key exercises for complete chest development. Click on any exercise card for detailed instructions.</p>
+            
+            <div class="row">
+              <!-- Exercise Card 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge beginner">Beginner</span>
+                  </div>
+                  <h3>Bench Press</h3>
+                  <p class="exercise-description">The foundational chest exercise that builds overall mass and strength in the pectorals.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Mid Chest</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Barbell, Bench</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise1Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge beginner">Beginner</span>
+                  </div>
+                  <h3>Incline Dumbbell Press</h3>
+                  <p class="exercise-description">Targets the upper chest to create fullness and balanced pectoral development.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Upper Chest</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Dumbbells, Incline Bench</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise2Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Dumbbell Flyes</h3>
+                  <p class="exercise-description">Isolates the chest muscles and provides a deep stretch for improved muscle development.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Pectoral Stretch</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Dumbbells, Bench</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise3Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 4 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Cable Crossovers</h3>
+                  <p class="exercise-description">Provides constant tension throughout the movement for enhanced definition.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Inner Chest</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Cable Station</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise4Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 5 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Decline Bench Press</h3>
+                  <p class="exercise-description">Emphasizes the lower chest for complete pectoral development and thickness.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Lower Chest</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Barbell, Decline Bench</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise5Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 6 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge advanced">Advanced</span>
+                  </div>
+                  <h3>Dips</h3>
+                  <p class="exercise-description">Compound bodyweight exercise that builds lower chest mass and triceps strength.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Lower/Outer Chest</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Parallel Bars</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise6Modal">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Workout Plans Section -->
+          <div class="workout-plans-section">
+            <h2>Chest Workout Plans</h2>
+            <p class="section-intro">Choose a workout plan based on your experience level and goals.</p>
+            
+            <div class="row">
+              <!-- Workout Plan Card 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card">
+                  <div class="workout-header">
+                    <h3>Beginner Routine</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Beginner</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">Perfect for those new to chest training, focusing on proper form and building foundational strength.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 30-40 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 1-2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Bench Press: 3 sets x 10-12 reps</li>
+                        <li>Incline Dumbbell Press: 3 sets x 10-12 reps</li>
+                        <li>Dumbbell Flyes: 2 sets x 12-15 reps</li>
+                        <li>Push-ups: 2 sets to near failure</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 90 seconds between sets</p>
+                        <p><strong>Tempo:</strong> 2 seconds down, 1 second pause, 2 seconds up</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Workout Plan Card 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card featured-workout">
+                  <div class="workout-badge">Recommended</div>
+                  <div class="workout-header">
+                    <h3>Mass Builder</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Intermediate</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">Designed to maximize chest size and strength with progressive overload principles.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 45-60 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 1-2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Bench Press: 4 sets x 6-8 reps</li>
+                        <li>Incline Dumbbell Press: 3 sets x 8-10 reps</li>
+                        <li>Decline Bench Press: 3 sets x 8-10 reps</li>
+                        <li>Dumbbell Flyes: 3 sets x 10-12 reps</li>
+                        <li>Cable Crossovers: 3 sets x 12-15 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 2 minutes for compound movements, 90 seconds for isolation</p>
+                        <p><strong>Tempo:</strong> 3 seconds down, 1 second pause, 1-2 seconds up</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Workout Plan Card 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card">
+                  <div class="workout-header">
+                    <h3>Definition & Detail</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Advanced</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">High-volume workout that emphasizes muscle separation and detail with advanced techniques.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 60-75 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 1-2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Incline Bench Press: 4 sets x 10-12 reps</li>
+                        <li>Flat Dumbbell Press: 4 sets x 10-12 reps</li>
+                        <li>Dips: 3 sets x 10-15 reps</li>
+                        <li>Cable Flyes (High to Low): 3 sets x 12-15 reps</li>
+                        <li>Cable Flyes (Low to High): 3 sets x 12-15 reps</li>
+                        <li>Push-ups (Drop Set): 2 sets to failure</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 60 seconds between sets</p>
+                        <p><strong>Techniques:</strong> Include supersets, drop sets, and rest-pause sets</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Training Tips Section -->
+          <div class="training-tips-section">
+            <h2>Chest Training Tips</h2>
+            
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Form & Technique</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Keep your feet flat on the floor during bench exercises</li>
+                    <li>Maintain a slight arch in your lower back for proper positioning</li>
+                    <li>Retract your shoulder blades to create a stable base</li>
+                    <li>Lower the weight under control to the mid-chest area</li>
+                    <li>Focus on pushing through your chest muscles, not just your shoulders</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Programming Guidelines</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Train chest 1-2 times per week, allowing 48-72 hours for recovery</li>
+                    <li>Begin with compound movements before isolation exercises</li>
+                    <li>Vary angles (incline, flat, decline) to target all chest regions</li>
+                    <li>For mass: 6-10 reps, for definition: 12-15 reps</li>
+                    <li>Incorporate both free weights and machines for balanced development</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Injury Prevention</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Always warm up thoroughly with lighter weights</li>
+                    <li>Use a spotter for heavy bench press sets</li>
+                    <li>Keep your elbows at a 45-75 degree angle to the body (not 90°)</li>
+                    <li>Balance chest training with adequate back exercises</li>
+                    <li>If experiencing shoulder pain, reduce range of motion or switch to dumbbells</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Nutrition Support</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Consume sufficient protein (1.6-2.2g per kg of bodyweight)</li>
+                    <li>Ensure adequate carbohydrates for energy during heavy pressing</li>
+                    <li>Stay hydrated before, during, and after workouts</li>
+                    <li>Consider a protein/carb shake within 30 minutes post-workout</li>
+                    <li>For chest growth, maintain a slight caloric surplus; for definition, a moderate deficit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Common Mistakes Section -->
+          <div class="common-mistakes-section">
+            <h2>Common Chest Training Mistakes</h2>
+            
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Bouncing the Bar</h3>
+                  <p>Allowing the barbell to bounce off your chest reduces tension, limits muscle growth, and increases injury risk.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Control the eccentric (lowering) phase, pause briefly at the bottom, then press the weight back up without bouncing.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Flaring Elbows</h3>
+                  <p>Having your elbows at 90 degrees to your body puts excessive stress on the shoulders and reduces chest activation.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Keep your elbows at a 45-75 degree angle to your body to maximize chest engagement while protecting your shoulders.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Neglecting Upper/Lower Chest</h3>
+                  <p>Focusing solely on flat bench pressing leads to imbalanced chest development and potential aesthetic issues.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Include incline work for upper chest and decline or dip movements for lower chest to develop balanced pectorals.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Section -->
+          <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="accordion" id="chestFAQ">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    How often should I train chest?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="faqOne" data-bs-parent="#chestFAQ">
+                  <div class="accordion-body">
+                    For optimal growth and recovery, most people benefit from training chest 1-2 times per week with at least 48-72 hours between sessions. The exact frequency depends on your training split, volume, intensity, and individual recovery capacity. Beginners can often make good progress with once-weekly dedicated chest workouts, while more advanced lifters may benefit from twice-weekly training with varied exercises and rep ranges.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Why do I feel bench press more in my shoulders or triceps?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#chestFAQ">
+                  <div class="accordion-body">
+                    Feeling bench press primarily in your shoulders or triceps usually indicates form issues or muscle imbalances. Common causes include: using a grip that's too narrow, flaring elbows excessively, not retracting your shoulder blades, poor mind-muscle connection, or having relatively weak chest muscles compared to shoulders and triceps. To improve chest activation, widen your grip slightly, focus on pressing the weight with your chest muscles rather than pushing with your arms, retract your shoulder blades, and include pre-exhaust techniques like performing flyes before pressing.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    What's more effective: barbell or dumbbell bench press?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#chestFAQ">
+                  <div class="accordion-body">
+                    Both exercises are effective but offer different benefits. Barbell bench press allows you to lift heavier weights and is excellent for overall strength and mass development. Dumbbell bench press requires more stabilization, helps correct muscle imbalances, provides a greater range of motion, and may reduce shoulder strain for some people. For optimal results, include both variations in your program, either by alternating them between workouts or using one as a primary movement and the other as an accessory exercise.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How can I develop my upper chest?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#chestFAQ">
+                  <div class="accordion-body">
+                    The upper chest (clavicular portion of the pectoralis major) responds best to incline movements. The most effective exercises include incline barbell press (15-30° incline), incline dumbbell press, incline dumbbell flyes, and low-to-high cable crossovers. For best results, perform these exercises early in your workout when you're fresh, prioritize proper form over heavy weight, and use a consistent incline angle (too steep shifts work to the front deltoids). Dedicate at least 30-40% of your chest training volume to upper chest exercises for balanced development.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    How do I fix uneven chest development?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#chestFAQ">
+                  <div class="accordion-body">
+                    To address uneven chest development: (1) Incorporate unilateral work such as single-arm dumbbell presses, single-arm cable crossovers, and single-arm machine presses; (2) Focus on mind-muscle connection with the weaker side; (3) Start with your weaker side when doing unilateral exercises and match the same reps with your stronger side; (4) Consider using pre-exhaustion techniques on the stronger side before bilateral movements; (5) Be patient - muscle imbalances take time to correct; (6) Check your form for potential issues like uneven bar position or shoulder rotation that may be contributing to the imbalance.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Exercise Detail Modals -->
+  <!-- Modal for Bench Press -->
+  <div class="modal fade" id="exercise1Modal" tabindex="-1" aria-labelledby="exercise1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exercise1ModalLabel">Bench Press</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="exercise-modal-img">
+                  <div class="exercise-img-placeholder">
+                    <i class="fas fa-dumbbell"></i>
+                  </div>
+                </div>
+                <div class="exercise-modal-info">
+                  <p><strong>Target Muscles:</strong> Pectoralis Major (middle), Anterior Deltoids, Triceps</p>
+                  <p><strong>Equipment:</strong> Barbell, Bench</p>
+                  <p><strong>Difficulty:</strong> Beginner</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h5>Instructions</h5>
+                <ol class="instruction-steps">
+                  <li>Lie on a flat bench with your feet firmly planted on the ground.</li>
+                  <li>Grip the barbell slightly wider than shoulder-width apart.</li>
+                  <li>Unrack the bar and hold it directly above your chest with arms extended.</li>
+                  <li>Lower the bar in a controlled manner until it touches your mid-chest.</li>
+                  <li>Press the bar back up to the starting position by extending your arms.</li>
+                </ol>
+                
+                <h5>Key Form Points</h5>
+                <ul class="key-points">
+                  <li>Retract your shoulder blades and maintain a slight arch in your lower back</li>
+                  <li>Keep your elbows at a 45-75 degree angle to your body</li>
+                  <li>Breathe in while lowering the weight, out while pressing</li>
+                  <li>Keep your wrists straight throughout the movement</li>
+                </ul>
+                
+                <h5>Variations</h5>
+                <ul class="variations-list">
+                  <li>Close-grip bench press (emphasizes triceps)</li>
+                  <li>Wide-grip bench press (greater chest stretch)</li>
+                  <li>Paused bench press (increases difficulty and eliminates momentum)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Add to Workout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal for Incline Dumbbell Press -->
+    <div class="modal fade" id="exercise2Modal" tabindex="-1" aria-labelledby="exercise2ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exercise2ModalLabel">Incline Dumbbell Press</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="exercise-modal-img">
+                  <div class="exercise-img-placeholder">
+                    <i class="fas fa-dumbbell"></i>
+                  </div>
+                </div>
+                <div class="exercise-modal-info">
+                  <p><strong>Target Muscles:</strong> Upper Chest (Clavicular Head), Anterior Deltoids, Triceps</p>
+                  <p><strong>Equipment:</strong> Dumbbells, Incline Bench</p>
+                  <p><strong>Difficulty:</strong> Beginner</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h5>Instructions</h5>
+                <ol class="instruction-steps">
+                  <li>Set an adjustable bench to an incline of 30-45 degrees.</li>
+                  <li>Sit on the bench with a dumbbell in each hand resting on your thighs.</li>
+                  <li>Kick the weights up one at a time as you lie back on the bench.</li>
+                  <li>Position the dumbbells at shoulder width with palms facing forward.</li>
+                  <li>Press the dumbbells upward until your arms are extended.</li>
+                  <li>Lower the weights with control until they are at chest level.</li>
+                </ol>
+                
+                <h5>Key Form Points</h5>
+                <ul class="key-points">
+                  <li>Keep your back flat against the bench</li>
+                  <li>Lower the dumbbells with elbows at roughly 45 degrees to your body</li>
+                  <li>Focus on using the upper chest to drive the movement</li>
+                  <li>Keep your wrists neutral (not bent) throughout</li>
+                </ul>
+                
+                <h5>Variations</h5>
+                <ul class="variations-list">
+                  <li>Alternating incline dumbbell press</li>
+                  <li>Neutral grip incline press (palms facing each other)</li>
+                  <li>Different incline angles (steeper for more shoulder, shallower for more chest)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Add to Workout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Additional modals for other exercises would go here -->
+  
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5>About Us</h5>
+            <p class="text-muted">Our gym is dedicated to helping you achieve your fitness goals in a supportive environment.</p>
+          </div>
+          
+          <div class="col-md-4 mb-3">
+            <h5>Contact Us</h5>
+            <address class="text-muted">
+              Σωρού 74<br>
+              Μαρούσι 151 25<br>
+              <a href="tel:+1234567890" class="text-decoration-none">Phone: (123) 456-7890</a><br>
+              <a href="mailto:info@gymname.com" class="text-decoration-none">Email: info@gymname.com</a>
+            </address>
+          </div>
+          
+          <div class="col-md-4 mb-3">
+            <h5>Follow Us</h5>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row border-top pt-3">
+          <div class="col-12 text-center">
+            <p class="text-muted">© 2025 GymRat. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/menu.js"></script>
+    <script src="./js/loginstate.js"></script>
+    <script src="./js/logincheck.js"></script>
+  </body>
+  </html>

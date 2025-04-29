@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoulders Training - GymRat</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/menu.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <a href="./index.html" class="logo-link">
+      <img src="./images/logo.png" alt="Gym Logo">
+    </a>
+    
+    <form class="search-form">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search..."
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+    
+    <button class="login-btn auth-btn" onclick="location.href='./login.html'">Login</button>
+    <button class="logout-btn auth-btn" onclick="location.href='./index.html'"style='visibility: hidden;'>Log out</button>
+  </div>
+
+  <!-- Mobile Navigation Toggle (Only visible on mobile) -->
+  <div class="mobile-nav-toggle">
+    <button class="btn btn-dark" id="mobileMenuToggle">☰ Menu</button>
+  </div>
+
+  <!-- Mobile Side Menu (Only visible on mobile) -->
+  <div class="mobile-side-menu" id="mobileSideMenu">
+    <button class="close-menu" id="closeMenuBtn">×</button>
+    <h5>Menu</h5>
+    <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+    <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+    <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+    <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+    <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+    <a href="./triceps.html" class="menu-item" data-protected="true">Triceps</a>
+    <a href="./shoulders.html" class="menu-item active-menu-item" data-protected="true">Shoulders</a>
+    <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+    <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+    <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+    <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Desktop Left Menu (Hidden on mobile) -->
+      <div class="col-12 col-md-3 col-lg-2 desktop-menu">
+        <div class="menu-container">
+          <h5>Menu</h5>
+          <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+          <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+          <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+          <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+          <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+          <a href="./triceps.html" class="menu-item" data-protected="true">Triceps</a>
+          <a href="./shoulders.html" class="menu-item active-menu-item" data-protected="true">Shoulders</a>
+          <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+          <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+          <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+          <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-9 col-lg-10">
+        <div class="content-container">
+          <div class="muscle-header">
+            <div class="muscle-title">
+              <h1>Shoulders Training</h1>
+              <p class="muscle-subtitle">Build powerful, well-balanced shoulders with our comprehensive guide</p>
+            </div>
+            <div class="muscle-overview">
+              <div class="muscle-illustration">
+                <div class="muscle-image-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Introduction Section -->
+          <div class="muscle-intro">
+            <h2>Understanding Your Shoulder Muscles</h2>
+            <p>The shoulder is one of the most complex and mobile joints in the human body. It consists of multiple muscles that work together to provide a wide range of motion. Well-developed shoulders not only create an impressive physique but also support performance in many upper body exercises and daily activities.</p>
+            <p>Effective shoulder training targets all three deltoid heads:</p>
+            <ul class="muscle-list">
+              <li><strong>Anterior (Front) Deltoid</strong> - Involved in pushing and raising arms forward</li>
+              <li><strong>Lateral (Side) Deltoid</strong> - Creates shoulder width and is activated when raising arms to the side</li>
+              <li><strong>Posterior (Rear) Deltoid</strong> - Often underdeveloped, crucial for shoulder balance and posture</li>
+            </ul>
+            <p>Additional muscles in the shoulder complex include the rotator cuff muscles (supraspinatus, infraspinatus, teres minor, and subscapularis) and the trapezius. These muscles provide stability and support for shoulder movements.</p>
+          </div>
+          
+          <!-- Exercises Section -->
+          <div class="exercises-section">
+            <h2>Shoulder Exercises</h2>
+            <p class="section-intro">Master these key exercises for complete shoulder development. Click on any exercise card for detailed instructions.</p>
+            
+            <div class="row">
+              <!-- Exercise Card 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge beginner">Beginner</span>
+                  </div>
+                  <h3>Overhead Press</h3>
+                  <p class="exercise-description">Fundamental compound movement that targets all three deltoid heads, particularly the anterior deltoid.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Anterior Deltoid</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Barbell or Dumbbells</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise1Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge beginner">Beginner</span>
+                  </div>
+                  <h3>Lateral Raises</h3>
+                  <p class="exercise-description">Isolation movement that specifically targets the lateral deltoids for shoulder width.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Lateral Deltoid</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Dumbbells or Cables</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise2Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Face Pulls</h3>
+                  <p class="exercise-description">Targets the rear deltoids and rotator cuff muscles for balanced shoulders and improved posture.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Posterior Deltoid</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Cable Machine, Rope</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise3Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 4 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Upright Rows</h3>
+                  <p class="exercise-description">Compound movement targeting the lateral deltoids and upper traps for shoulder development.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Lateral Deltoid, Traps</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Barbell, Dumbbells, or Cable</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise4Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 5 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Reverse Pec Deck Flyes</h3>
+                  <p class="exercise-description">Isolation exercise that effectively targets the posterior deltoids for balanced shoulder development.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Posterior Deltoid</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Pec Deck Machine</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise5Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 6 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge advanced">Advanced</span>
+                  </div>
+                  <h3>Arnold Press</h3>
+                  <p class="exercise-description">Dynamic movement that targets all three deltoid heads through a rotational pressing pattern.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: All Deltoid Heads</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Dumbbells</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise6Modal">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Workout Plans Section -->
+          <div class="workout-plans-section">
+            <h2>Shoulder Workout Plans</h2>
+            <p class="section-intro">Choose a workout plan based on your experience level and goals.</p>
+            
+            <div class="row">
+              <!-- Workout Plan Card 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card">
+                  <div class="workout-header">
+                    <h3>Beginner Routine</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Beginner</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">Perfect for those new to shoulder training, focusing on form and basic movement patterns.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 30-40 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 1-2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Seated Dumbbell Press: 3 sets x 10-12 reps</li>
+                        <li>Lateral Raises: 3 sets x 12-15 reps</li>
+                        <li>Front Raises: 2 sets x 12-15 reps</li>
+                        <li>Bent-Over Reverse Flyes: 3 sets x 12-15 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 60-90 seconds between sets</p>
+                        <p><strong>Tempo:</strong> 2 seconds up, 2 seconds down</p>
+                        <p><strong>Note:</strong> Start with lighter weights to master proper form</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Workout Plan Card 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card featured-workout">
+                  <div class="workout-badge">Recommended</div>
+                  <div class="workout-header">
+                    <h3>Complete Development</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Intermediate</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">Balanced routine targeting all three deltoid heads for complete shoulder development.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 45-60 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Barbell Overhead Press: 4 sets x 8-10 reps</li>
+                        <li>Lateral Raises: 3 sets x 12-15 reps</li>
+                        <li>Face Pulls: 3 sets x 15-20 reps</li>
+                        <li>Upright Rows: 3 sets x 10-12 reps</li>
+                        <li>Reverse Pec Deck Flyes: 3 sets x 12-15 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 60-90 seconds between sets</p>
+                        <p><strong>Tempo:</strong> 2 seconds up, 3 seconds down</p>
+                        <p><strong>Note:</strong> Focus on mind-muscle connection for each head</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Workout Plan Card 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card">
+                  <div class="workout-header">
+                    <h3>Advanced Routine</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Advanced</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">High-intensity workout incorporating advanced techniques for shoulder growth and definition.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 60-75 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 1-2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Arnold Press: 4 sets x 8-10 reps</li>
+                        <li>Superset: Lateral Raises + Front Raises: 3 sets x 12 reps each</li>
+                        <li>Face Pulls: 4 sets x 15 reps</li>
+                        <li>Upright Rows: 3 sets x 10-12 reps</li>
+                        <li>Reverse Pec Deck Flyes (Drop Sets): 2 sets x failure at 3 weights</li>
+                        <li>Cable Lateral Raises: 3 sets x 15 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 45-60 seconds between sets, 90 seconds between supersets</p>
+                        <p><strong>Tempo:</strong> Vary tempo for different exercises</p>
+                        <p><strong>Note:</strong> Incorporate techniques like drop sets, supersets, and rest-pause</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Training Tips Section -->
+          <div class="training-tips-section">
+            <h2>Shoulder Training Tips</h2>
+            
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Form & Technique</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Always warm up thoroughly before shoulder training</li>
+                    <li>Keep a slight bend in the elbows during lateral and front raises</li>
+                    <li>Avoid using momentum to lift weights</li>
+                    <li>For overhead presses, avoid excessive arching of the lower back</li>
+                    <li>When performing upright rows, keep the elbows below shoulder height to prevent impingement</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Programming Guidelines</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Train shoulders 1-2 times per week, allowing 48-72 hours for recovery</li>
+                    <li>Prioritize the deltoid head you want to develop most at the beginning of your workout</li>
+                    <li>Include exercises for all three deltoid heads in each shoulder workout</li>
+                    <li>For mass: 8-10 reps, for definition: 12-15 reps</li>
+                    <li>Consider splitting shoulder training into push days (anterior deltoid) and pull days (posterior deltoid)</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Injury Prevention</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Include rotator cuff strengthening exercises in your routine</li>
+                    <li>Maintain balanced development of all three deltoid heads</li>
+                    <li>Avoid excessive internal rotation during pressing movements</li>
+                    <li>If you experience shoulder pain, reduce range of motion and weight</li>
+                    <li>Incorporate mobility exercises for the shoulder joint into your warm-up</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Nutrition Support</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Ensure adequate protein intake (1.6-2.2g per kg of bodyweight)</li>
+                    <li>Consider supplements that support joint health, such as omega-3 fatty acids</li>
+                    <li>Stay hydrated before, during, and after workouts</li>
+                    <li>Consume a balanced post-workout meal with protein and carbohydrates</li>
+                    <li>For shoulder growth, maintain a slight caloric surplus; for definition, a moderate deficit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Common Mistakes Section -->
+          <div class="common-mistakes-section">
+            <h2>Common Shoulder Training Mistakes</h2>
+            
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Neglecting Rear Deltoids</h3>
+                  <p>Most training programs overemphasize the anterior deltoid while neglecting the posterior deltoid, leading to muscle imbalances and potential injury.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Ensure your shoulder workout includes specific exercises for the rear deltoids, such as face pulls, reverse flyes, or band pull-aparts.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Poor Overhead Press Form</h3>
+                  <p>Excessive arching of the lower back or failing to engage the core during overhead presses increases risk of injury.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Brace your core, maintain a neutral spine, and avoid excessive arching. If mobility is an issue, use alternatives like landmine presses.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Incorrect Lateral Raise Technique</h3>
+                  <p>Using excessive weight, momentum, or incorrect arm position reduces effectiveness and increases injury risk.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Use moderate weight, maintain slight elbow bend, lead with elbows (not hands), and avoid swinging or shrugging during lateral raises.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Section -->
+          <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="accordion" id="shouldersFAQ">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    How often should I train shoulders?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="faqOne" data-bs-parent="#shouldersFAQ">
+                  <div class="accordion-body">
+                    Most people benefit from training shoulders 1-2 times per week. If you follow a body part split, one dedicated shoulder day per week is typically sufficient. For upper/lower or push/pull/legs splits, shoulders may be trained twice weekly as part of push days. Allow at least 48-72 hours of recovery between intense shoulder sessions.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Why do I feel shoulder exercises more in my traps?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#shouldersFAQ">
+                  <div class="accordion-body">
+                    If you feel shoulder exercises predominantly in your traps, you're likely shrugging during the movement or using too much weight. This is common during lateral raises when the traps take over to assist with the lift. To target the deltoids more effectively, consciously keep your traps relaxed, slightly tilt your torso forward, and use lighter weights with strict form. Focus on leading with your elbows rather than your hands.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    What's the best exercise for wider shoulders?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#shouldersFAQ">
+                  <div class="accordion-body">
+                    Lateral raises are the most effective exercise for developing wider-looking shoulders as they directly target the lateral (side) deltoid heads. For maximum effectiveness, perform lateral raises with proper form, use a variety of equipment (dumbbells, cables, resistance bands), and incorporate different variations (seated, standing, leaning). Pair lateral raises with overhead pressing movements for complete lateral deltoid development.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How can I avoid shoulder pain during training?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#shouldersFAQ">
+                  <div class="accordion-body">
+                    To avoid shoulder pain during training: (1) Always warm up thoroughly with dynamic stretches and light resistance; (2) Strengthen your rotator cuff muscles with specific exercises; (3) Maintain balanced development of all deltoid heads, especially the rear deltoids; (4) Use appropriate range of motion based on your individual shoulder mobility; (5) Avoid exercises that cause pain and modify movements as needed; (6) Ensure proper posture and scapular positioning during pushing and pulling exercises; (7) Allow adequate recovery between shoulder training sessions.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Should I train shoulders with chest or back?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#shouldersFAQ">
+                  <div class="accordion-body">
+                    Both approaches can work depending on your split and recovery capabilities. Training shoulders with chest (push day) makes sense as pressing movements work both muscle groups, and they share similar movement patterns. However, this approach can be fatiguing for the anterior deltoids, which are already heavily involved in chest exercises. Alternatively, training rear deltoids with back (pull day) and anterior/lateral deltoids on push days can allow for better recovery and more volume for each deltoid head. Choose based on your recovery ability and specific goals.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Exercise Detail Modals -->
+  <!-- Modal for Overhead Press -->
+  <div class="modal fade" id="exercise1Modal" tabindex="-1" aria-labelledby="exercise1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exercise1ModalLabel">Overhead Press</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="exercise-modal-img">
+                <div class="exercise-img-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+              <div class="exercise-modal-info">
+                <p><strong>Target Muscles:</strong> Anterior Deltoid (primary), Lateral Deltoid, Triceps, Upper Chest</p>
+                <p><strong>Equipment:</strong> Barbell or Dumbbells</p>
+                <p><strong>Difficulty:</strong> Beginner to Intermediate</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5>Instructions</h5>
+              <ol class="instruction-steps">
+                <li>Stand with feet shoulder-width apart, core braced.</li>
+                <li>For barbell: grip the bar at shoulder width; for dumbbells: hold weights at shoulder height with palms facing forward.</li>
+                <li>Press the weight directly overhead by extending your arms.</li>
+                <li>At the top, your arms should be fully extended with the weight(s) aligned over your shoulders.</li>
+                <li>Lower the weight back to the starting position in a controlled manner.</li>
+              </ol>
+              
+              <h5>Key Form Points</h5>
+              <ul class="key-points">
+                <li>Keep your core engaged throughout the movement</li>
+                <li>Avoid excessive arching of your lower back</li>
+                <li>Keep wrists straight and aligned with forearms</li>
+                <li>Ensure the weight travels in a straight line</li>
+              </ul>
+              
+              <h5>Variations</h5>
+              <ul class="variations-list">
+                <li>Seated overhead press (provides back support)</li>
+                <li>Push press (incorporates leg drive for heavier weights)</li>
+                <li>Single-arm overhead press (addresses imbalances)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add to Workout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Lateral Raises -->
+  <div class="modal fade" id="exercise2Modal" tabindex="-1" aria-labelledby="exercise2ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exercise2ModalLabel">Lateral Raises</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="exercise-modal-img">
+                <div class="exercise-img-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+              <div class="exercise-modal-info">
+                <p><strong>Target Muscles:</strong> Lateral Deltoid (primary), Anterior Deltoid (secondary)</p>
+                <p><strong>Equipment:</strong> Dumbbells or Cable Machine</p>
+                <p><strong>Difficulty:</strong> Beginner</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5>Instructions</h5>
+              <ol class="instruction-steps">
+                <li>Stand with feet shoulder-width apart, holding dumbbells at your sides.</li>
+                <li>Keep a slight bend in your elbows (about 10-15 degrees).</li>
+                <li>Raise the weights out to the sides until your arms are parallel to the floor.</li>
+                <li>Briefly pause at the top position.</li>
+                <li>Lower the weights back down slowly to the starting position.</li>
+              </ol>
+              
+              <h5>Key Form Points</h5>
+              <ul class="key-points">
+                <li>Lead with your elbows, not your hands</li>
+                <li>Keep your traps relaxed (avoid shrugging)</li>
+                <li>Maintain a slight forward lean to target the lateral deltoid</li>
+                <li>Use a controlled tempo, especially on the lowering phase</li>
+              </ul>
+              
+              <h5>Variations</h5>
+              <ul class="variations-list">
+                <li>Cable lateral raises (provides constant tension)</li>
+                <li>Leaning lateral raises (increases range of motion)</li>
+                <li>Seated lateral raises (reduces body momentum)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add to Workout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Additional modals for other exercises would go here -->
+  
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>About Us</h5>
+          <p class="text-muted">Our gym is dedicated to helping you achieve your fitness goals in a supportive environment.</p>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <h5>Contact Us</h5>
+          <address class="text-muted">
+            Σωρού 74<br>
+            Μαρούσι 151 25<br>
+            <a href="tel:+1234567890" class="text-decoration-none">Phone: (123) 456-7890</a><br>
+            <a href="mailto:info@gymname.com" class="text-decoration-none">Email: info@gymname.com</a>
+          </address>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <h5>Follow Us</h5>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row border-top pt-3">
+        <div class="col-12 text-center">
+          <p class="text-muted">© 2025 GymRat. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./js/menu.js"></script>
+  <script src="./js/loginstate.js"></script>
+  <script src="./js/logincheck.js"></script>
+</body>
+</html>

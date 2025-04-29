@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biceps Training - GymRat</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/menu.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <a href="./index.html" class="logo-link">
+      <img src="./images/logo.png" alt="Gym Logo">
+    </a>
+    
+    <form class="search-form">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search..."
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+    
+    <button class="login-btn auth-btn" onclick="location.href='./login.html'">Login</button>
+    <button class="logout-btn auth-btn" onclick="location.href='./index.html'"style='visibility: hidden;'>Log out</button>
+  </div>
+
+  <!-- Mobile Navigation Toggle (Only visible on mobile) -->
+  <div class="mobile-nav-toggle">
+    <button class="btn btn-dark" id="mobileMenuToggle">☰ Menu</button>
+  </div>
+
+  <!-- Mobile Side Menu (Only visible on mobile) -->
+  <div class="mobile-side-menu" id="mobileSideMenu">
+    <button class="close-menu" id="closeMenuBtn">×</button>
+    <h5>Menu</h5>
+    <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+    <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+    <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+    <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+    <a href="./biceps.html" class="menu-item active-menu-item" data-protected="true">Biceps</a>
+    <a href="./triceps.html" class="menu-item" data-protected="true">Triceps</a>
+    <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+    <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+    <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+    <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+    <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Desktop Left Menu (Hidden on mobile) -->
+      <div class="col-12 col-md-3 col-lg-2 desktop-menu">
+        <div class="menu-container">
+          <h5>Menu</h5>
+          <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+          <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+          <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+          <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+          <a href="./biceps.html" class="menu-item active-menu-item" data-protected="true">Biceps</a>
+          <a href="./triceps.html" class="menu-item" data-protected="true">Triceps</a>
+          <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+          <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+          <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+          <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+          <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-9 col-lg-10">
+        <div class="content-container">
+          <div class="muscle-header">
+            <div class="muscle-title">
+              <h1>Biceps Training</h1>
+              <p class="muscle-subtitle">Build stronger, more defined biceps with our comprehensive guide</p>
+            </div>
+            <div class="muscle-overview">
+              <div class="muscle-illustration">
+                <div class="muscle-image-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Introduction Section -->
+          <div class="muscle-intro">
+            <h2>Understanding Your Biceps</h2>
+            <p>The biceps brachii, commonly known as the biceps, is a two-headed muscle located on the front of the upper arm. It's one of the most visible muscle groups and often associated with strength. The biceps functions primarily to flex the elbow and rotate the forearm.</p>
+            <p>Effective biceps training targets three key muscles:</p>
+            <ul class="muscle-list">
+              <li><strong>Biceps Brachii</strong> - The main muscle with two heads (long and short)</li>
+              <li><strong>Brachialis</strong> - Located underneath the biceps, adds thickness to the arm</li>
+              <li><strong>Brachioradialis</strong> - A forearm muscle that contributes to elbow flexion</li>
+            </ul>
+          </div>
+          
+          <!-- Exercises Section -->
+          <div class="exercises-section">
+            <h2>Biceps Exercises</h2>
+            <p class="section-intro">Master these key exercises for complete biceps development. Click on any exercise card for detailed instructions.</p>
+            
+            <div class="row">
+              <!-- Exercise Card 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge beginner">Beginner</span>
+                  </div>
+                  <h3>Standing Barbell Curl</h3>
+                  <p class="exercise-description">The classic biceps builder that focuses on overall mass development.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Biceps Brachii</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Barbell</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise1Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Incline Dumbbell Curl</h3>
+                  <p class="exercise-description">Emphasizes the long head of the biceps for better peak development.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Long Head</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Dumbbells, Bench</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise2Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge advanced">Advanced</span>
+                  </div>
+                  <h3>Concentration Curl</h3>
+                  <p class="exercise-description">Isolates the biceps with maximum peak contraction for definition.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Peak Contraction</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Dumbbell, Bench</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise3Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 4 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Hammer Curl</h3>
+                  <p class="exercise-description">Targets the brachialis and brachioradialis for wider, thicker arms.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Brachialis</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Dumbbells</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise4Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 5 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Cable Curl</h3>
+                  <p class="exercise-description">Provides constant tension throughout the movement for muscle growth.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Overall Biceps</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Cable Machine</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise5Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 6 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge advanced">Advanced</span>
+                  </div>
+                  <h3>Preacher Curl</h3>
+                  <p class="exercise-description">Isolates the biceps while preventing cheating for strict form.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Short Head</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Preacher Bench, EZ Bar</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise6Modal">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Workout Plans Section -->
+          <div class="workout-plans-section">
+            <h2>Biceps Workout Plans</h2>
+            <p class="section-intro">Choose a workout plan based on your experience level and goals.</p>
+            
+            <div class="row">
+              <!-- Workout Plan Card 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card">
+                  <div class="workout-header">
+                    <h3>Beginner Routine</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Beginner</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">Perfect for those new to biceps training, focusing on proper form and building a foundation.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 30 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 1-2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Standing Barbell Curl: 3 sets x 10-12 reps</li>
+                        <li>Hammer Curl: 3 sets x 10-12 reps</li>
+                        <li>Cable Curl: 2 sets x 12-15 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 90 seconds between sets</p>
+                        <p><strong>Tempo:</strong> 2 seconds up, 2 seconds down</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Workout Plan Card 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card featured-workout">
+                  <div class="workout-badge">Recommended</div>
+                  <div class="workout-header">
+                    <h3>Mass Builder</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Intermediate</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">Designed to maximize biceps size and strength with progressive overload principles.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 45 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Standing Barbell Curl: 4 sets x 8-10 reps</li>
+                        <li>Incline Dumbbell Curl: 3 sets x 10-12 reps</li>
+                        <li>Hammer Curl: 3 sets x 10-12 reps</li>
+                        <li>Cable Curl: 3 sets x 12-15 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 60-90 seconds between sets</p>
+                        <p><strong>Tempo:</strong> 2 seconds up, 3 seconds down</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Workout Plan Card 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card">
+                  <div class="workout-header">
+                    <h3>Definition & Peak</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Advanced</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">High-intensity workout for maximum definition and biceps peak development.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 60 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Incline Dumbbell Curl: 4 sets x 10-12 reps</li>
+                        <li>Preacher Curl: 3 sets x 10-12 reps</li>
+                        <li>Concentration Curl: 3 sets x 12-15 reps</li>
+                        <li>Cable Curl (Drop Sets): 2 sets x 15-20-25 reps</li>
+                        <li>Hammer Curl: 3 sets x 12-15 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 45-60 seconds between sets</p>
+                        <p><strong>Tempo:</strong> 2 seconds up, hold 1 second at top, 3 seconds down</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Training Tips Section -->
+          <div class="training-tips-section">
+            <h2>Biceps Training Tips</h2>
+            
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Form & Technique</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Keep your elbows fixed at your sides to isolate the biceps</li>
+                    <li>Fully extend your arms at the bottom of each rep</li>
+                    <li>Squeeze at the top of each contraction for 1-2 seconds</li>
+                    <li>Avoid swinging or using momentum to lift the weight</li>
+                    <li>Focus on the mind-muscle connection throughout the movement</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Programming Guidelines</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Train biceps 1-2 times per week with at least 48 hours recovery</li>
+                    <li>Begin with compound movements, then move to isolation exercises</li>
+                    <li>For mass: 8-12 reps, for definition: 12-15 reps</li>
+                    <li>Progress by increasing weight or reps before adding more sets</li>
+                    <li>Consider combining biceps with back or triceps with chest for recovery</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Injury Prevention</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Always warm up properly with light weights or resistance bands</li>
+                    <li>Avoid excessive weight that compromises form</li>
+                    <li>Strengthen antagonist muscles (triceps) for joint stability</li>
+                    <li>Stretch the biceps and forearms after training</li>
+                    <li>If experiencing elbow pain, reduce weight and evaluate form</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Nutrition Support</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Consume sufficient protein (1.6-2.2g per kg of bodyweight)</li>
+                    <li>Ensure adequate carbohydrates for training energy</li>
+                    <li>Stay hydrated before, during, and after workouts</li>
+                    <li>Consider a protein shake within 30 minutes post-workout</li>
+                    <li>Focus on overall caloric surplus for growth, deficit for definition</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Common Mistakes Section -->
+          <div class="common-mistakes-section">
+            <h2>Common Biceps Training Mistakes</h2>
+            
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Excessive Weight</h3>
+                  <p>Using too much weight leads to poor form and reduces biceps activation while increasing injury risk.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Choose a weight that allows you to perform full repetitions with proper form through the entire set.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Body Swinging</h3>
+                  <p>Using body momentum to swing weights up reduces tension on the biceps and limits growth stimulus.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Keep your upper body still and focus on moving only at the elbow joint during curls.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Incomplete Range of Motion</h3>
+                  <p>Not fully extending the arm at the bottom or curling completely at the top limits development.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Work through the full range of motion, from complete extension to full contraction.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Section -->
+          <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="accordion" id="bicepsFAQ">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    How often should I train biceps?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="faqOne" data-bs-parent="#bicepsFAQ">
+                  <div class="accordion-body">
+                    For optimal growth, train biceps 1-2 times per week with at least 48-72 hours of recovery between sessions. If you're doing a split routine, you might train biceps with back or on an "arm day" with triceps.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Why aren't my biceps growing despite regular training?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#bicepsFAQ">
+                  <div class="accordion-body">
+                    Common reasons include insufficient volume (total sets/reps), inadequate progressive overload, poor mind-muscle connection, overtraining, or nutritional deficiencies. Make sure you're increasing weight or reps over time, eating enough protein, and allowing proper recovery between workouts.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    What's more effective: barbell or dumbbell curls?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#bicepsFAQ">
+                  <div class="accordion-body">
+                    Both are effective but serve different purposes. Barbell curls allow you to lift heavier weight and are excellent for overall mass development. Dumbbell curls correct muscle imbalances and allow for greater range of motion. For optimal results, include both types in your training program.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How do I get more defined biceps peaks?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#bicepsFAQ">
+                  <div class="accordion-body">
+                    The biceps peak is largely determined by genetics, but you can maximize your natural potential with exercises that target the long head of the biceps, such as incline dumbbell curls and concentration curls. For definition, reduce body fat through nutrition and include higher rep ranges (12-15) in your training.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Should I train biceps to failure?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#bicepsFAQ">
+                  <div class="accordion-body">
+                    Training to failure occasionally can be beneficial but doing so in every set can lead to overtraining and injury. A better approach is to leave 1-2 reps in reserve for most sets, and only go to failure on the final set of an exercise or during advanced techniques like drop sets.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Exercise Detail Modals -->
+  <!-- Modal for Standing Barbell Curl -->
+  <div class="modal fade" id="exercise1Modal" tabindex="-1" aria-labelledby="exercise1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exercise1ModalLabel">Standing Barbell Curl</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="exercise-modal-img">
+                <div class="exercise-img-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+              <div class="exercise-modal-info">
+                <p><strong>Target Muscles:</strong> Biceps Brachii (both heads)</p>
+                <p><strong>Equipment:</strong> Barbell</p>
+                <p><strong>Difficulty:</strong> Beginner</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5>Instructions</h5>
+              <ol class="instruction-steps">
+                <li>Stand with feet shoulder-width apart, holding a barbell with palms facing up.</li>
+                <li>Keep your elbows close to your torso and your upper arms stationary.</li>
+                <li>Curl the weights while contracting your biceps until the barbell is at shoulder level.</li>
+                <li>Hold the contracted position for a brief pause.</li>
+                <li>Slowly begin to lower the barbell back to the starting position.</li>
+              </ol>
+              
+              <h5>Key Form Points</h5>
+              <ul class="key-points">
+                <li>Keep your back straight and avoid swinging</li>
+                <li>Maintain constant tension on the biceps</li>
+                <li>Breathe out when curling up, in when lowering</li>
+              </ul>
+              
+              <h5>Variations</h5>
+              <ul class="variations-list">
+                <li>Wide Grip: Emphasizes the short head</li>
+                <li>Narrow Grip: Focuses on the long head</li>
+                <li>EZ-Bar Curl: Reduces wrist strain</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add to Workout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5>About Us</h5>
+        <p class="text-muted">Our gym is dedicated to helping you achieve your fitness goals in a supportive environment.</p>
+      </div>
+      
+      <div class="col-md-4 mb-3">
+        <h5>Contact Us</h5>
+        <address class="text-muted">
+          Σωρού 74<br>
+          Μαρούσι 151 25<br>
+          <a href="tel:+1234567890" class="text-decoration-none">Phone: (123) 456-7890</a><br>
+          <a href="mailto:info@gymname.com" class="text-decoration-none">Email: info@gymname.com</a>
+        </address>
+      </div>
+      
+      <div class="col-md-4 mb-3">
+        <h5>Follow Us</h5>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row border-top pt-3">
+      <div class="col-12 text-center">
+        <p class="text-muted">© 2025 GymRat. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="./js/menu.js"></script>
+<script src="./js/loginstate.js"></script>
+<script src="./js/logincheck.js"></script>
+</body>
+</html>

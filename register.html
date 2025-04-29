@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <a href="./index.html" class="logo-link">
+      <img src="./images/logo.png" alt="Gym Logo">
+    </a>
+    
+    <button class="login-btn auth-btn" onclick="location.href='./index.html'">Back to Home</button>
+  </div>  
+
+  <div class="container-fluid">
+    <div class="row justify-content-center align-items-center register-container">
+      <div class="col-12 col-md-8 col-lg-5">
+        <div class="register-card">
+          <div class="register-header">
+            <h3>Create Your Account</h3>
+          </div>
+          <div class="register-body">
+            <form action="index.html" method="get">
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Choose a username" required>
+              </div>
+              
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              </div>
+              
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Choose a password" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="confirmPassword" class="form-label">Confirm Password</label>
+                  <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number (optional)</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+              </div>
+              
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                <label class="form-check-label" for="termsCheck">I agree to the <a href="#">Terms & Conditions</a></label>
+              </div>
+              
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn register-btn-submit">Create Account</button>
+                <p class="register-login-link">Already have an account? <a href="./login.html">Login here</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>About Us</h5>
+          <p class="text-muted">Our gym is dedicated to helping you achieve your fitness goals in a supportive environment.</p>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <h5>Contact Us</h5>
+          <address class="text-muted">
+            Σωρού 74<br>
+            Μαρούσι 151 25<br>
+            <a href="tel:+1234567890" class="text-decoration-none">Phone: (123) 456-7890</a><br>
+            <a href="mailto:info@gymname.com" class="text-decoration-none">Email: info@gymname.com</a>
+          </address>
+        </div>
+      </div>
+      
+      <div class="row border-top pt-3">
+        <div class="col-12 text-center">
+          <p class="text-muted">© 2025 GymRat. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

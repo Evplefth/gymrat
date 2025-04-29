@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Back Training - GymRat</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/menu.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <a href="./index.html" class="logo-link">
+      <img src="./images/logo.png" alt="Gym Logo">
+    </a>
+    
+    <form class="search-form">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search..."
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+    
+    <button class="login-btn auth-btn" onclick="location.href='./login.html'">Login</button>
+    <button class="logout-btn auth-btn" onclick="location.href='./index.html'"style='visibility: hidden;'>Log out</button>
+  </div>
+
+  <!-- Mobile Navigation Toggle (Only visible on mobile) -->
+  <div class="mobile-nav-toggle">
+    <button class="btn btn-dark" id="mobileMenuToggle">☰ Menu</button>
+  </div>
+
+  <!-- Mobile Side Menu (Only visible on mobile) -->
+  <div class="mobile-side-menu" id="mobileSideMenu">
+    <button class="close-menu" id="closeMenuBtn">×</button>
+    <h5>Menu</h5>
+    <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+    <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+    <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+    <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+    <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+    <a href="./triceps.html" class="menu-item" data-protected="true">Triceps</a>
+    <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+    <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+    <a href="./back.html" class="menu-item active-menu-item" data-protected="true">Back</a>
+    <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+    <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Desktop Left Menu (Hidden on mobile) -->
+      <div class="col-12 col-md-3 col-lg-2 desktop-menu">
+        <div class="menu-container">
+          <h5>Menu</h5>
+          <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+          <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+          <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+          <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+          <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+          <a href="./triceps.html" class="menu-item" data-protected="true">Triceps</a>
+          <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+          <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+          <a href="./back.html" class="menu-item active-menu-item" data-protected="true">Back</a>
+          <a href="./legs.html" class="menu-item" data-protected="true">Legs</a>
+          <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-9 col-lg-10">
+        <div class="content-container">
+          <div class="muscle-header">
+            <div class="muscle-title">
+              <h1>Back Training</h1>
+              <p class="muscle-subtitle">Build a powerful, well-developed back with our comprehensive guide</p>
+            </div>
+            <div class="muscle-overview">
+              <div class="muscle-illustration">
+                <div class="muscle-image-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Introduction Section -->
+          <div class="muscle-intro">
+            <h2>Understanding Your Back Muscles</h2>
+            <p>The back is one of the largest and most complex muscle groups in the body. A well-developed back not only creates an impressive V-taper physique but also provides core stability, improves posture, and supports overall functional strength.</p>
+            <p>The back consists of several major muscles:</p>
+            <ul class="muscle-list">
+              <li><strong>Latissimus Dorsi (Lats)</strong> - The large, fan-shaped muscles that span the mid and lower back, creating the "V" shape</li>
+              <li><strong>Trapezius (Traps)</strong> - The diamond-shaped muscle extending from the neck to mid-back with upper, middle, and lower regions</li>
+              <li><strong>Rhomboids</strong> - Located between the shoulder blades, these muscles retract the scapulae</li>
+              <li><strong>Erector Spinae</strong> - The group of muscles running along the spine that support and extend the back</li>
+              <li><strong>Teres Major & Minor</strong> - Smaller muscles working with the lats and contributing to shoulder movement</li>
+              <li><strong>Infraspinatus & Supraspinatus</strong> - Rotator cuff muscles that stabilize the shoulder joint</li>
+            </ul>
+            <p>Effective back training requires a variety of exercises that target different areas through both vertical pulling (lat-focused) and horizontal pulling (mid-back focused) movements.</p>
+          </div>
+          
+          <!-- Exercises Section -->
+          <div class="exercises-section">
+            <h2>Back Exercises</h2>
+            <p class="section-intro">Master these key exercises for complete back development. Click on any exercise card for detailed instructions.</p>
+            
+            <div class="row">
+              <!-- Exercise Card 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge beginner">Beginner</span>
+                  </div>
+                  <h3>Lat Pulldown</h3>
+                  <p class="exercise-description">Fundamental exercise that targets the latissimus dorsi and develops back width.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Latissimus Dorsi</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Cable Machine, Lat Bar</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise1Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge beginner">Beginner</span>
+                  </div>
+                  <h3>Seated Cable Row</h3>
+                  <p class="exercise-description">Targets the middle back muscles to improve thickness and posture.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Middle Back, Rhomboids</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Cable Machine, Row Handle</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise2Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Bent-Over Barbell Row</h3>
+                  <p class="exercise-description">Compound movement that builds overall back thickness and strength.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Full Back Development</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Barbell</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise3Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 4 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Single-Arm Dumbbell Row</h3>
+                  <p class="exercise-description">Unilateral exercise that corrects imbalances and targets the lats and middle back.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Lats, Rhomboids</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Dumbbell, Bench</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise4Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 5 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Face Pull</h3>
+                  <p class="exercise-description">Targets the rear deltoids, upper traps, and rhomboids for improved posture and shoulder health.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Rear Deltoids, Upper Back</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Cable Machine, Rope Attachment</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise5Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 6 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge advanced">Advanced</span>
+                  </div>
+                  <h3>Pull-Ups</h3>
+                  <p class="exercise-description">Challenging bodyweight exercise that builds upper body strength and back width.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Latissimus Dorsi, Upper Back</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Pull-Up Bar</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise6Modal">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Workout Plans Section -->
+          <div class="workout-plans-section">
+            <h2>Back Workout Plans</h2>
+            <p class="section-intro">Choose a workout plan based on your experience level and goals.</p>
+            
+            <div class="row">
+              <!-- Workout Plan Card 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card">
+                  <div class="workout-header">
+                    <h3>Beginner Routine</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Beginner</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">Perfect for those new to back training, focusing on proper form and basic movement patterns.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 30-40 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 1-2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Lat Pulldown: 3 sets x 12 reps</li>
+                        <li>Seated Cable Row: 3 sets x 12 reps</li>
+                        <li>Assisted Pull-Ups: 2 sets x 8-10 reps</li>
+                        <li>Dumbbell Single-Arm Row: 2 sets x 10 reps per arm</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 90 seconds between sets</p>
+                        <p><strong>Tempo:</strong> 2 seconds pull, 2 seconds release</p>
+                        <p><strong>Focus:</strong> Learning proper technique and mind-muscle connection</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Workout Plan Card 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card featured-workout">
+                  <div class="workout-badge">Recommended</div>
+                  <div class="workout-header">
+                    <h3>Back Thickness & Width</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Intermediate</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">Balanced routine for developing both back width (lats) and thickness (mid-back).</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 45-60 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 1-2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Pull-Ups or Assisted Pull-Ups: 4 sets x 8-10 reps</li>
+                        <li>Bent-Over Barbell Row: 4 sets x 8-10 reps</li>
+                        <li>Seated Cable Row: 3 sets x 10-12 reps</li>
+                        <li>Single-Arm Dumbbell Row: 3 sets x 10 reps per arm</li>
+                        <li>Face Pull: 3 sets x 15 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 60-90 seconds between sets</p>
+                        <p><strong>Tempo:</strong> Controlled movement with brief pause at peak contraction</p>
+                        <p><strong>Progression:</strong> Increase weight by 5% when you can complete all reps with good form</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Workout Plan Card 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card">
+                  <div class="workout-header">
+                    <h3>Advanced Back Development</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Advanced</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">High-volume, high-intensity routine for experienced lifters seeking maximum back development.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 60-75 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 1-2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Weighted Pull-Ups: 4 sets x 6-8 reps</li>
+                        <li>Pendlay Row: 4 sets x 6-8 reps</li>
+                        <li>T-Bar Row: 3 sets x 8-10 reps</li>
+                        <li>Wide-Grip Lat Pulldown: 3 sets x 10-12 reps</li>
+                        <li>Seated Cable Row (different attachments): 3 sets x 10-12 reps</li>
+                        <li>Face Pull: 3 sets x 15-20 reps</li>
+                        <li>Straight-Arm Pulldown: 3 sets x 12-15 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 60-75 seconds between sets</p>
+                        <p><strong>Techniques:</strong> Include drop sets, rest-pause, and mechanical drop sets</p>
+                        <p><strong>Split:</strong> Consider dividing into vertical pull (width) and horizontal pull (thickness) days</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Training Tips Section -->
+          <div class="training-tips-section">
+            <h2>Back Training Tips</h2>
+            
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Form & Technique</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Initiate pulling movements by retracting your shoulder blades</li>
+                    <li>Focus on pulling with your elbows, not your hands</li>
+                    <li>Maintain a neutral spine during bent-over exercises</li>
+                    <li>Avoid excessive momentum and control the eccentric (lowering) phase</li>
+                    <li>Keep your chest up and shoulders back throughout rowing movements</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Programming Guidelines</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Train back 1-2 times per week with 48-72 hours recovery</li>
+                    <li>Include both vertical pulling (lat focus) and horizontal pulling (mid-back focus)</li>
+                    <li>For width: 8-12 reps, for thickness and density: 6-10 reps</li>
+                    <li>Incorporate a variety of grips (wide, narrow, neutral) for complete development</li>
+                    <li>Balance pushing and pulling exercises in your overall program (1:1 ratio)</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Injury Prevention</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Always warm up properly with light, high-rep sets</li>
+                    <li>Strengthen your core to support your back during heavy lifts</li>
+                    <li>Use lifting straps for heavy rows when grip becomes a limiting factor</li>
+                    <li>Include direct rotator cuff and rear deltoid work for shoulder health</li>
+                    <li>If experiencing lower back pain, use chest-supported rowing variations</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Nutrition Support</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Consume adequate protein (1.6-2.2g per kg of bodyweight)</li>
+                    <li>Ensure sufficient calories to support muscle growth</li>
+                    <li>Stay well-hydrated to maintain intervertebral disc health</li>
+                    <li>Consider omega-3 supplements for joint health and inflammation management</li>
+                    <li>Time carbohydrate intake around workouts for optimal energy and recovery</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Common Mistakes Section -->
+          <div class="common-mistakes-section">
+            <h2>Common Back Training Mistakes</h2>
+            
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Using Too Much Biceps</h3>
+                  <p>Relying on arm strength instead of back muscles during pulling exercises limits back development.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Think of your hands as hooks, initiate movement by retracting your shoulder blades, and focus on pulling with your elbows rather than your hands.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Excessive Momentum</h3>
+                  <p>Using body swing and momentum reduces tension on the back muscles and increases injury risk.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Use controlled movements, maintain proper posture, and focus on feeling the targeted muscles working through the full range of motion.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Incomplete Range of Motion</h3>
+                  <p>Not fully stretching or contracting the back muscles limits development and strength gains.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Allow a full stretch at the bottom of movements and complete the contraction by bringing the shoulder blades together at the peak of each repetition.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Section -->
+          <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="accordion" id="backFAQ">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    How often should I train back?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="faqOne" data-bs-parent="#backFAQ">
+                  <div class="accordion-body">
+                    Most people benefit from training back 1-2 times per week, with at least 48-72 hours of recovery between sessions. If you're following a body part split, once per week may be sufficient. For push/pull or upper/lower splits, you might train back twice weekly. The optimal frequency depends on your overall training volume, intensity, and individual recovery capacity. Signs that you may need more recovery include persistent soreness, decreased performance, or lack of mind-muscle connection during exercises.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Why do I feel back exercises more in my arms?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#backFAQ">
+                  <div class="accordion-body">
+                    Feeling back exercises primarily in your arms (especially biceps) is common and typically indicates underdeveloped back muscles or poor technique. To fix this issue: (1) Focus on initiating movements by retracting your shoulder blades before bending your arms; (2) Use a lighter weight that allows you to feel your back working; (3) Imagine pulling with your elbows rather than your hands; (4) Try using lifting straps to minimize grip fatigue; (5) Practice mind-muscle connection with isolation exercises like straight-arm pulldowns; (6) Consider using pre-exhaustion techniques, performing isolated back movements before compound pulling exercises.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    What's the difference between back width and thickness training?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#backFAQ">
+                  <div class="accordion-body">
+                    Back width and thickness require different training approaches. Width primarily involves developing the latissimus dorsi (lats) through vertical pulling movements like pull-ups, pulldowns, and pullovers, which create the V-taper appearance. Thickness involves developing the middle and upper back muscles (rhomboids, traps, erector spinae) through horizontal pulling movements like rows. For complete back development, incorporate both movement patterns in your training. Typically, begin your workout with the aspect you want to prioritize while you're fresh, then move to the secondary focus.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    What exercises are best for improving posture?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#backFAQ">
+                  <div class="accordion-body">
+                    For posture improvement, focus on exercises that strengthen the mid and upper back while addressing rounded shoulders: (1) Face pulls target the rear deltoids and upper back, directly counteracting forward shoulder position; (2) Band pull-aparts strengthen the rhomboids and external rotators; (3) Seated rows with a focus on shoulder blade retraction; (4) Reverse flyes for rear deltoid development; (5) Y-T-W raises for scapular control and upper back strength. Perform these exercises with lighter weights, perfect form, and higher repetitions (12-15) to build endurance in the postural muscles. Include them 2-3 times weekly, either in dedicated back workouts or as warm-ups before other training sessions.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    How can I progress to doing unassisted pull-ups?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#backFAQ">
+                  <div class="accordion-body">
+                    To progress to unassisted pull-ups: (1) Build strength with lat pulldowns, gradually increasing weight while maintaining strict form; (2) Use assisted pull-up machines or resistance bands, progressively reducing assistance; (3) Practice negative pull-ups - jump to the top position and lower yourself slowly (3-5 seconds); (4) Try partial range of motion pull-ups, gradually increasing your range; (5) Implement "greasing the groove" - do multiple sub-maximal sets throughout the day several times per week; (6) Strengthen your core and improve your grip strength, as these are often limiting factors. Be patient - developing pull-up strength takes time, but consistent effort will yield results.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Exercise Detail Modals -->
+  <!-- Modal for Lat Pulldown -->
+  <div class="modal fade" id="exercise1Modal" tabindex="-1" aria-labelledby="exercise1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exercise1ModalLabel">Lat Pulldown</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="exercise-modal-img">
+                <div class="exercise-img-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+              <div class="exercise-modal-info">
+                <p><strong>Target Muscles:</strong> Latissimus Dorsi (primary), Biceps, Rhomboids</p>
+                <p><strong>Equipment:</strong> Cable Machine with Lat Bar</p>
+                <p><strong>Difficulty:</strong> Beginner</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5>Instructions</h5>
+              <ol class="instruction-steps">
+                <li>Sit at a lat pulldown machine with your thighs secured under the pads.</li>
+                <li>Grasp the bar with a wide grip, slightly wider than shoulder width.</li>
+                <li>Start with your arms fully extended and shoulder blades elevated.</li>
+                <li>Retract your shoulder blades and pull the bar down toward your upper chest.</li>
+                <li>Pause briefly at the bottom of the movement, feeling the contraction in your lats.</li>
+                <li>Slowly return to the starting position with controlled movement.</li>
+              </ol>
+              
+              <h5>Key Form Points</h5>
+              <ul class="key-points">
+                <li>Keep your chest up and maintain a slight arch in your lower back</li>
+                <li>Pull the bar to your upper chest, not behind your neck</li>
+                <li>Focus on using your back muscles, not your arms</li>
+                <li>Avoid leaning too far back or using momentum</li>
+              </ul>
+              
+              <h5>Variations</h5>
+              <ul class="variations-list">
+                <li>Close-grip pulldown (targets inner lats)</li>
+                <li>V-bar pulldown (neutral grip for comfort)</li>
+                <li>Single-arm pulldown (addresses imbalances)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add to Workout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Seated Cable Row -->
+  <div class="modal fade" id="exercise2Modal" tabindex="-1" aria-labelledby="exercise2ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exercise2ModalLabel">Seated Cable Row</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="exercise-modal-img">
+                <div class="exercise-img-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+              <div class="exercise-modal-info">
+                <p><strong>Target Muscles:</strong> Middle Back, Rhomboids, Lats, Traps</p>
+                <p><strong>Equipment:</strong> Cable Machine with Row Handle</p>
+                <p><strong>Difficulty:</strong> Beginner</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5>Instructions</h5>
+              <ol class="instruction-steps">
+                <li>Sit at a seated row machine with your feet placed on the footrests.</li>
+                <li>Grasp the handle with both hands, arms fully extended.</li>
+                <li>Keep your back straight and chest up.</li>
+                <li>Pull the handle towards your lower abdomen by driving your elbows back.</li>
+                <li>Squeeze your shoulder blades together at the peak of the movement.</li>
+                <li>Slowly extend your arms back to the starting position.</li>
+              </ol>
+              
+              <h5>Key Form Points</h5>
+              <ul class="key-points">
+                <li>Maintain an upright torso with a slight lean backward</li>
+                <li>Keep your shoulders down away from your ears</li>
+                <li>Avoid using momentum or rocking back and forth</li>
+                <li>Focus on pulling with your back muscles, not your arms</li>
+              </ul>
+              
+              <h5>Variations</h5>
+              <ul class="variations-list">
+                <li>Wide-grip handle (targets upper back)</li>
+                <li>Rope attachment (allows greater range of motion)</li>
+                <li>Single-arm cable row (addresses imbalances)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add to Workout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Additional modals for other exercises would go here -->
+  
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>About Us</h5>
+          <p class="text-muted">Our gym is dedicated to helping you achieve your fitness goals in a supportive environment.</p>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <h5>Contact Us</h5>
+          <address class="text-muted">
+            Σωρού 74<br>
+            Μαρούσι 151 25<br>
+            <a href="tel:+1234567890" class="text-decoration-none">Phone: (123) 456-7890</a><br>
+            <a href="mailto:info@gymname.com" class="text-decoration-none">Email: info@gymname.com</a>
+          </address>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <h5>Follow Us</h5>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row border-top pt-3">
+        <div class="col-12 text-center">
+          <p class="text-muted">© 2025 GymRat. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./js/menu.js"></script>
+  <script src="./js/loginstate.js"></script>
+  <script src="./js/logincheck.js"></script>
+</body>
+</html>

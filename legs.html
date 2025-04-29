@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legs Training - GymRat</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/menu.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <a href="./index.html" class="logo-link">
+      <img src="./images/logo.png" alt="Gym Logo">
+    </a>
+    
+    <form class="search-form">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search..."
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+    
+    <button class="login-btn auth-btn" onclick="location.href='./login.html'">Login</button>
+    <button class="logout-btn auth-btn" onclick="location.href='./index.html'"style='visibility: hidden;'>Log out</button>
+  </div>
+
+  <!-- Mobile Navigation Toggle (Only visible on mobile) -->
+  <div class="mobile-nav-toggle">
+    <button class="btn btn-dark" id="mobileMenuToggle">☰ Menu</button>
+  </div>
+
+  <!-- Mobile Side Menu (Only visible on mobile) -->
+  <div class="mobile-side-menu" id="mobileSideMenu">
+    <button class="close-menu" id="closeMenuBtn">×</button>
+    <h5>Menu</h5>
+    <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+    <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+    <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+    <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+    <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+    <a href="./triceps.html" class="menu-item" data-protected="true">Triceps</a>
+    <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+    <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+    <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+    <a href="./legs.html" class="menu-item active-menu-item" data-protected="true">Legs</a>
+    <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Desktop Left Menu (Hidden on mobile) -->
+      <div class="col-12 col-md-3 col-lg-2 desktop-menu">
+        <div class="menu-container">
+          <h5>Menu</h5>
+          <a href="./index.html" class="menu-item" data-protected="true">Home</a>
+          <a href="./account.html" class="menu-item" data-protected="true">My Account</a>
+          <a href="./weeklycal.html" class="menu-item" data-protected="true">Calendar</a>
+          <a href="./bmi.html" class="menu-item" data-protected="true">BMI calculator</a>
+          <a href="./biceps.html" class="menu-item" data-protected="true">Biceps</a>
+          <a href="./triceps.html" class="menu-item" data-protected="true">Triceps</a>
+          <a href="./shoulders.html" class="menu-item" data-protected="true">Shoulders</a>
+          <a href="./chest.html" class="menu-item" data-protected="true">Chest</a>
+          <a href="./back.html" class="menu-item" data-protected="true">Back</a>
+          <a href="./legs.html" class="menu-item active-menu-item" data-protected="true">Legs</a>
+          <a href="./abs.html" class="menu-item" data-protected="true">Abs</a>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-9 col-lg-10">
+        <div class="content-container">
+          <div class="muscle-header">
+            <div class="muscle-title">
+              <h1>Legs Training</h1>
+              <p class="muscle-subtitle">Build powerful, well-developed legs with our comprehensive guide</p>
+            </div>
+            <div class="muscle-overview">
+              <div class="muscle-illustration">
+                <div class="muscle-image-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Introduction Section -->
+          <div class="muscle-intro">
+            <h2>Understanding Your Leg Muscles</h2>
+            <p>The legs contain some of the largest and strongest muscles in the human body. Training your legs not only creates a balanced physique but also improves overall strength, boosts athletic performance, and supports daily functional movements.</p>
+            <p>The legs consist of several major muscle groups:</p>
+            <ul class="muscle-list">
+              <li><strong>Quadriceps</strong> - The four muscles at the front of the thigh (vastus lateralis, vastus medialis, vastus intermedius, and rectus femoris) responsible for extending the knee</li>
+              <li><strong>Hamstrings</strong> - The three muscles at the back of the thigh (biceps femoris, semitendinosus, and semimembranosus) that flex the knee and extend the hip</li>
+              <li><strong>Glutes</strong> - The three muscles that make up the buttocks (gluteus maximus, gluteus medius, and gluteus minimus) which are powerful hip extensors</li>
+              <li><strong>Calves</strong> - The gastrocnemius and soleus muscles at the back of the lower leg, responsible for plantar flexion (pointing the foot downward)</li>
+              <li><strong>Adductors</strong> - The inner thigh muscles that pull the legs toward the midline of the body</li>
+              <li><strong>Abductors</strong> - The outer hip muscles that move the leg away from the midline</li>
+            </ul>
+            <p>Effective leg training requires a balanced approach that targets all these muscle groups through a variety of exercises and movement patterns.</p>
+          </div>
+          
+          <!-- Exercises Section -->
+          <div class="exercises-section">
+            <h2>Leg Exercises</h2>
+            <p class="section-intro">Master these key exercises for complete leg development. Click on any exercise card for detailed instructions.</p>
+            
+            <div class="row">
+              <!-- Exercise Card 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge beginner">Beginner</span>
+                  </div>
+                  <h3>Barbell Squat</h3>
+                  <p class="exercise-description">The king of leg exercises that builds overall lower body strength and muscle mass.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Quadriceps, Glutes</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Barbell, Squat Rack</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise1Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge beginner">Beginner</span>
+                  </div>
+                  <h3>Romanian Deadlift</h3>
+                  <p class="exercise-description">Targets the posterior chain with emphasis on hamstrings and glutes.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Hamstrings, Glutes</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Barbell or Dumbbells</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise2Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Leg Press</h3>
+                  <p class="exercise-description">Machine-based compound movement that allows for heavy loading of the legs.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Quadriceps, Glutes</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Leg Press Machine</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise3Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 4 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Walking Lunges</h3>
+                  <p class="exercise-description">Dynamic exercise that targets the quadriceps, glutes, and improves balance.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Quadriceps, Glutes</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Dumbbells (optional)</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise4Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 5 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Leg Extensions</h3>
+                  <p class="exercise-description">Isolation exercise that specifically targets the quadriceps muscles.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Quadriceps</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Leg Extension Machine</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise5Modal">View Details</button>
+                </div>
+              </div>
+              
+              <!-- Exercise Card 6 -->
+              <div class="col-md-4 mb-4">
+                <div class="exercise-card">
+                  <div class="exercise-img-placeholder">
+                    <span class="difficulty-badge intermediate">Intermediate</span>
+                  </div>
+                  <h3>Standing Calf Raises</h3>
+                  <p class="exercise-description">Targets the gastrocnemius muscle for calf development and ankle strength.</p>
+                  <div class="exercise-meta">
+                    <span class="target-area"><i class="fas fa-bullseye"></i> Main Target: Calves (Gastrocnemius)</span>
+                    <span class="equipment"><i class="fas fa-dumbbell"></i> Equipment: Calf Raise Machine or Step</span>
+                  </div>
+                  <button class="btn view-exercise-btn" data-bs-toggle="modal" data-bs-target="#exercise6Modal">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Workout Plans Section -->
+          <div class="workout-plans-section">
+            <h2>Leg Workout Plans</h2>
+            <p class="section-intro">Choose a workout plan based on your experience level and goals.</p>
+            
+            <div class="row">
+              <!-- Workout Plan Card 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card">
+                  <div class="workout-header">
+                    <h3>Beginner Routine</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Beginner</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">Perfect for those new to leg training, focusing on proper form and building foundational strength.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 40-50 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 1-2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Bodyweight Squats: 3 sets x 12-15 reps</li>
+                        <li>Dumbbell Romanian Deadlifts: 3 sets x 10-12 reps</li>
+                        <li>Walking Lunges: 2 sets x 10 steps per leg</li>
+                        <li>Leg Press: 3 sets x 12 reps</li>
+                        <li>Standing Calf Raises: 3 sets x 15 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 90-120 seconds between sets</p>
+                        <p><strong>Tempo:</strong> 2 seconds down, 1 second up</p>
+                        <p><strong>Focus:</strong> Learning proper technique and developing mind-muscle connection</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Workout Plan Card 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card featured-workout">
+                  <div class="workout-badge">Recommended</div>
+                  <div class="workout-header">
+                    <h3>Quad & Hamstring Builder</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Intermediate</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">Balanced routine for developing both the front (quadriceps) and back (hamstrings) of the legs.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 50-60 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 1-2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Barbell Back Squats: 4 sets x 8-10 reps</li>
+                        <li>Romanian Deadlifts: 4 sets x 8-10 reps</li>
+                        <li>Walking Lunges: 3 sets x 12 steps per leg</li>
+                        <li>Leg Extensions: 3 sets x 12 reps</li>
+                        <li>Leg Curls: 3 sets x 12 reps</li>
+                        <li>Standing Calf Raises: 4 sets x 15 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 60-90 seconds between sets</p>
+                        <p><strong>Tempo:</strong> Control the eccentric (lowering) phase</p>
+                        <p><strong>Progression:</strong> Increase weight by 5% when you can complete all reps with good form</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Workout Plan Card 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="workout-card">
+                  <div class="workout-header">
+                    <h3>Advanced Leg Development</h3>
+                    <span class="workout-level"><i class="fas fa-signal"></i> Advanced</span>
+                  </div>
+                  <div class="workout-content">
+                    <p class="workout-description">High-volume, high-intensity routine for experienced lifters seeking maximum leg development.</p>
+                    <div class="workout-details">
+                      <div class="workout-info">
+                        <span><i class="fas fa-clock"></i> Duration: 70-90 min</span>
+                        <span><i class="fas fa-redo"></i> Frequency: 1-2x week</span>
+                      </div>
+                      <ol class="workout-exercises">
+                        <li>Barbell Back Squats: 5 sets x 5-8 reps</li>
+                        <li>Leg Press: 4 sets x 8-10 reps</li>
+                        <li>Romanian Deadlifts: 4 sets x 8-10 reps</li>
+                        <li>Walking Lunges: 3 sets x 10 steps per leg</li>
+                        <li>Leg Extensions (Drop Sets): 3 sets x failure</li>
+                        <li>Leg Curls: 3 sets x 12 reps</li>
+                        <li>Standing Calf Raises: 4 sets x 12-15 reps</li>
+                        <li>Seated Calf Raises: 3 sets x 15-20 reps</li>
+                      </ol>
+                      <div class="workout-notes">
+                        <p><strong>Rest:</strong> 90-120 seconds for compound movements, 60 seconds for isolation</p>
+                        <p><strong>Techniques:</strong> Incorporate techniques like drop sets, rest-pause, and supersets</p>
+                        <p><strong>Split:</strong> Consider splitting into quad-focused and hamstring-focused sessions</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Training Tips Section -->
+          <div class="training-tips-section">
+            <h2>Leg Training Tips</h2>
+            
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Form & Technique</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Keep your knees aligned with your toes during squatting movements</li>
+                    <li>Maintain a neutral spine in all exercises, especially deadlifts</li>
+                    <li>Drive through your heels during squats and hip hinge movements</li>
+                    <li>Achieve proper depth in squats (thighs parallel to the ground or lower)</li>
+                    <li>Control the eccentric (lowering) phase of each repetition</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Programming Guidelines</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Train legs 1-2 times per week with 72+ hours recovery</li>
+                    <li>Begin with compound movements before isolation exercises</li>
+                    <li>For strength: 3-6 reps, for hypertrophy: 8-12 reps, for endurance: 15-20 reps</li>
+                    <li>Include exercises for all major leg muscles (quads, hamstrings, glutes, calves)</li>
+                    <li>For lagging muscle groups, train them first in your workout when fresh</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Injury Prevention</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Warm up thoroughly with dynamic stretches and light sets</li>
+                    <li>Use proper footwear with good support for squatting</li>
+                    <li>Progress weight gradually, especially for compound movements</li>
+                    <li>Use a spotter or safety bars when performing heavy squats</li>
+                    <li>Listen to your body and distinguish between muscle fatigue and joint pain</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-4">
+                <div class="tips-card">
+                  <div class="tips-header">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Nutrition Support</h3>
+                  </div>
+                  <ul class="tips-list">
+                    <li>Consume sufficient protein (1.6-2.2g per kg of bodyweight)</li>
+                    <li>Increase carbohydrate intake on leg training days for energy</li>
+                    <li>Stay well-hydrated to prevent cramping during intense workouts</li>
+                    <li>Consider creatine supplementation for improved strength and recovery</li>
+                    <li>Ensure adequate post-workout nutrition to support recovery</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Common Mistakes Section -->
+          <div class="common-mistakes-section">
+            <h2>Common Leg Training Mistakes</h2>
+            
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Insufficient Depth in Squats</h3>
+                  <p>Not squatting deep enough (thighs at least parallel to the floor) limits muscle activation and development.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Work on mobility and technique to achieve proper depth. If necessary, reduce weight and focus on form before progressing.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Knees Caving Inward</h3>
+                  <p>Allowing knees to collapse inward during squats or leg press puts stress on ligaments and reduces muscle activation.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Focus on pushing knees outward during squats, strengthen hip abductors, and consider using resistance bands around knees as a reminder.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <div class="mistake-card">
+                  <div class="mistake-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <h3>Neglecting Hamstrings</h3>
+                  <p>Focusing only on quad-dominant exercises creates muscle imbalances and increases injury risk.</p>
+                  <div class="correct-approach">
+                    <h4>Correct Approach:</h4>
+                    <p>Include dedicated hamstring exercises like Romanian deadlifts, leg curls, and good mornings in your routine for balanced development.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Section -->
+          <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="accordion" id="legsFAQ">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    How often should I train legs?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="faqOne" data-bs-parent="#legsFAQ">
+                  <div class="accordion-body">
+                    Most people benefit from training legs 1-2 times per week with at least 72 hours of recovery between intense leg sessions. Leg muscles, particularly the larger muscle groups like quadriceps and hamstrings, generally require more recovery time than smaller muscle groups. Beginners might start with once weekly to allow adaptation, while more advanced lifters can typically handle twice weekly training with proper programming. Split your leg workouts into different focuses (e.g., quad-dominant vs. hamstring-dominant) if training legs twice weekly.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Are squats bad for your knees?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#legsFAQ">
+                  <div class="accordion-body">
+                    Properly performed squats are not bad for healthy knees and can actually strengthen the structures around the knee joint. Research has shown that squatting with proper form distributes force appropriately and can improve knee stability. The key is proper execution: maintain alignment between knees and toes, avoid excessive forward knee travel, and control the movement. That said, individuals with existing knee injuries or conditions should consult a healthcare professional before performing loaded squats. Alternative exercises or modified ranges of motion might be recommended for those with specific knee issues.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    What's the best exercise for building bigger legs?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#legsFAQ">
+                  <div class="accordion-body">
+                    While no single exercise is "best" for everyone, compound movements like barbell squats, leg press, and deadlift variations tend to be most effective for overall leg development due to their ability to recruit multiple muscle groups and allow for heavy loading. The squat is often considered the king of leg exercises because it engages quadriceps, hamstrings, glutes, and even calves while allowing for progressive overload. However, optimal leg development requires a variety of exercises targeting different muscles from different angles. For complete leg development, include both knee-dominant (squats, leg press) and hip-dominant (deadlifts, hip thrusts) movements in your routine.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How can I reduce post-leg day soreness?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#legsFAQ">
+                  <div class="accordion-body">
+                    To reduce Delayed Onset Muscle Soreness (DOMS) after leg day: (1) Progress gradually with volume and intensity rather than making large jumps; (2) Include a thorough warm-up before training and cool-down with light stretching afterward; (3) Stay well-hydrated before, during, and after your workout; (4) Consider light active recovery like walking or cycling the day after leg training to increase blood flow; (5) Use foam rolling or massage to reduce muscle tension; (6) Ensure adequate post-workout nutrition, particularly protein and carbohydrates; (7) Get sufficient sleep for optimal recovery; (8) Consider contrast therapy (alternating hot and cold) or cold water immersion for severe soreness.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Why aren't my calves growing despite training them?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#legsFAQ">
+                  <div class="accordion-body">
+                    Calf development can be challenging for several reasons: (1) Calves have a high percentage of slow-twitch muscle fibers that are more resistant to growth; (2) Calves are used to high volume through daily activities like walking, making them adapted to endurance rather than growth; (3) Genetics significantly influence calf shape and growth potential. To maximize calf development: train them with higher frequency (2-3 times weekly); use a full range of motion with a pause at the stretched position; incorporate both straight-leg (gastrocnemius focus) and bent-leg (soleus focus) variations; progressively increase weight; try higher rep ranges (15-25) and multiple set approaches; and consider techniques like drop sets and slow eccentrics to increase time under tension.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Exercise Detail Modals -->
+  <!-- Modal for Barbell Squat -->
+  <div class="modal fade" id="exercise1Modal" tabindex="-1" aria-labelledby="exercise1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exercise1ModalLabel">Barbell Squat</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="exercise-modal-img">
+                <div class="exercise-img-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+              <div class="exercise-modal-info">
+                <p><strong>Target Muscles:</strong> Quadriceps, Glutes, Hamstrings, Lower Back, Core</p>
+                <p><strong>Equipment:</strong> Barbell, Squat Rack</p>
+                <p><strong>Difficulty:</strong> Beginner to Intermediate</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5>Instructions</h5>
+              <ol class="instruction-steps">
+                <li>Set up a barbell at upper chest height in a squat rack.</li>
+                <li>Position yourself under the bar with it resting across your upper traps/rear delts (for high bar) or lower on your rear delts (for low bar).</li>
+                <li>Grip the bar wider than shoulder-width apart.</li>
+                <li>Unrack the bar by standing up, then step back and position your feet shoulder-width or slightly wider apart.</li>
+                <li>Brace your core, keep your chest up, and begin the descent by bending at the knees and hips simultaneously.</li>
+                <li>Lower until your thighs are at least parallel to the ground, keeping your back neutral.</li>
+                <li>Drive through your heels to return to the starting position, extending your knees and hips.</li>
+              </ol>
+              
+              <h5>Key Form Points</h5>
+              <ul class="key-points">
+                <li>Keep your knees tracking in line with your toes</li>
+                <li>Maintain a neutral spine throughout the movement</li>
+                <li>Drive through the mid-foot and heel, not the toes</li>
+                <li>Keep your elbows down and chest up</li>
+              </ul>
+              
+              <h5>Variations</h5>
+              <ul class="variations-list">
+                <li>Front squat (more quad emphasis, less lower back stress)</li>
+                <li>Box squat (builds power and teaches proper depth)</li>
+                <li>Goblet squat (beginner-friendly with a dumbbell or kettlebell)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add to Workout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Romanian Deadlift -->
+  <div class="modal fade" id="exercise2Modal" tabindex="-1" aria-labelledby="exercise2ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exercise2ModalLabel">Romanian Deadlift</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="exercise-modal-img">
+                <div class="exercise-img-placeholder">
+                  <i class="fas fa-dumbbell"></i>
+                </div>
+              </div>
+              <div class="exercise-modal-info">
+                <p><strong>Target Muscles:</strong> Hamstrings, Glutes, Lower Back</p>
+                <p><strong>Equipment:</strong> Barbell or Dumbbells</p>
+                <p><strong>Difficulty:</strong> Beginner to Intermediate</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5>Instructions</h5>
+              <ol class="instruction-steps">
+                <li>Stand with feet hip-width apart, holding a barbell in front of your thighs with an overhand grip.</li>
+                <li>Keep your shoulders back, chest up, and knees slightly bent.</li>
+                <li>Begin the movement by pushing your hips back while keeping the barbell close to your legs.</li>
+                <li>Lower the barbell by hinging at the hips, not by squatting.</li>
+                <li>Continue lowering until you feel a stretch in your hamstrings (typically when the bar is just below knee level).</li>
+                <li>Drive your hips forward to return to the starting position, squeezing your glutes at the top.</li>
+              </ol>
+              
+              <h5>Key Form Points</h5>
+              <ul class="key-points">
+                <li>Maintain a neutral spine throughout the movement</li>
+                <li>Keep the bar close to your legs during the entire exercise</li>
+                <li>Focus on hip hinging rather than squatting</li>
+                <li>Keep a slight bend in the knees throughout (knees do not move during the exercise)</li>
+              </ul>
+              
+              <h5>Variations</h5>
+              <ul class="variations-list">
+                <li>Dumbbell Romanian deadlift (easier to learn, less loading)</li>
+                <li>Single-leg Romanian deadlift (adds balance challenge, addresses asymmetries)</li>
+                <li>Banded Romanian deadlift (adds accommodating resistance)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add to Workout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Additional modals for other exercises would go here -->
+  
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>About Us</h5>
+          <p class="text-muted">Our gym is dedicated to helping you achieve your fitness goals in a supportive environment.</p>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <h5>Contact Us</h5>
+          <address class="text-muted">
+            Σωρού 74<br>
+            Μαρούσι 151 25<br>
+            <a href="tel:+1234567890" class="text-decoration-none">Phone: (123) 456-7890</a><br>
+            <a href="mailto:info@gymname.com" class="text-decoration-none">Email: info@gymname.com</a>
+          </address>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <h5>Follow Us</h5>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row border-top pt-3">
+        <div class="col-12 text-center">
+          <p class="text-muted">© 2025 GymRat. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./js/menu.js"></script>
+  <script src="./js/loginstate.js"></script>
+  <script src="./js/logincheck.js"></script>
+</body>
+</html>
